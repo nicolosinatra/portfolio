@@ -1,0 +1,257 @@
+
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('../font/NeueRegrade-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('../font/NeueRegrade-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('../font/NeueRegrade-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-home {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 470px;
+}
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+  font-size: 40px;
+  color: #1a1a1a;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 245px;
+}
+
+.filters {
+  position: fixed;
+  left: 20px;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+  font-size: 32px;
+  color: #1a1a1a;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.project-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  gap: 0;
+}
+
+.project {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.project span {
+  --project-line-height: 0.833;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+  font-size: 18vw;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  text-align: right;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(var(--project-line-height) * 1em);
+  letter-spacing: 0;
+  width: 100%;
+  display: block;
+}
+
+.project span:hover {
+  line-height: calc(var(--project-line-height) * 1em);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 2%; /* 6px */
+  text-underline-offset: -45%; /* -108px */
+  text-underline-position: from-font;
+  text-transform: uppercase;
+}
+
+.contact-info {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #1a1a1a;
+  color: #fafafa;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 35px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.contact-info p {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  min-width: 100%;
+  animation: marquee 25s linear infinite;
+}
+
+.contact-info p::after {
+  content: attr(data-marquee);
+  position: absolute;
+  left: 100%;
+  top: 0;
+  white-space: nowrap;
+  padding-left: 5px; /* spazio tra le ripetizioni */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* TABLET: max-width 1024px */
+@media (max-width: 1024px) {
+  .desktop-home {
+    gap: 200px;
+    padding: 16px;
+  }
+
+  .header {
+    font-size: 28px;
+    width: 180px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .filters {
+    left: 16px;
+    bottom: 70px;
+  }
+
+  .filter-btn {
+    font-size: 24px;
+  }
+
+  .project-list {
+    padding-bottom: 30px;
+  }
+
+  .project {
+    max-width: 100vw;
+  }
+
+  .project span {
+    font-size: 18vw;
+  }
+
+  .contact-info {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0 8px;
+  }
+}
+
+
+/* MOBILE: max-width 600px */
+@media (max-width: 600px) {
+  .desktop-home {
+    gap: 60px;
+    padding: 8px;
+  }
+
+  .header {
+    font-size: 18px;
+    width: 110px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .filters {
+    left: 8px;
+    bottom: 60px;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+  }
+
+  .project-list {
+    padding-bottom: 15px;
+  }
+
+  .project {
+    max-width: 100vw;
+  }
+
+  .project span {
+    font-size: 18vw;
+    word-break: break-word;
+    text-align: right;
+    width: 100vw;
+    display: block;
+    margin-right: 0;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 4px;
+  }
+}

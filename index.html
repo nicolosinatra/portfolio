@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Desktop - HOME</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Assicurati di includere il font Neue Regrade se disponibile -->
+</head>
+<body>
+  <div class="desktop-home" data-name="Desktop - HOME" data-node-id="4:3">
+    <!-- Header -->
+    <div class="header" data-node-id="4:4">
+      <p>Nicolò Sinatra</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters" data-name="Filters" data-node-id="28:56">
+      <button class="filter-btn" data-name="• txt •" data-node-id="28:92">
+        <span>Graphic design</span>
+      </button>
+      <button class="filter-btn" data-name="• txt •" data-node-id="28:95">
+        <span>UX/UI design</span>
+      </button>
+      <button class="filter-btn" data-name="• txt •" data-node-id="28:98">
+        <span>Photography</span>
+      </button>
+    </div>
+
+    <!-- Project List -->
+    <div class="project-list" data-name="Project List" data-node-id="6:7">
+      <div class="project" data-name="Project" data-node-id="9:31"><span>ARC</span></div>
+      <div class="project" data-name="Project" data-node-id="9:45"><span>SOTTOSALE</span></div>
+      <div class="project" data-name="Project" data-node-id="9:48"><span>5,5</span></div>
+      <div class="project" data-name="Project" data-node-id="12:94"><span>FOMM QUELL</span></div>
+      <div class="project" data-name="Project" data-node-id="9:67"><span>ADU FLYER</span></div>
+      <div class="project" data-name="Project" data-node-id="9:51"><span>PRBF</span></div>
+      <div class="project" data-name="Project" data-node-id="9:59"><span>OSAMA</span></div>
+      <div class="project" data-name="Project" data-node-id="9:56"><span>LE NUVOLE</span></div>
+      <div class="project" data-name="Project" data-node-id="12:129"><span>POLIFEMO EYE</span></div>
+      <div class="project" data-name="Project" data-node-id="9:62"><span>KILLER TRIP</span></div>
+    </div>
+
+    <!-- Contact Info -->
+   <div class="contact-info" data-name="Contact Info" data-node-id="6:14">
+      <p>
+        Get in touch by – Instagram – LinkedIn – Mail – Get in touch by – Instagram – LinkedIn – Mail – Get in touch by – Instagram – LinkedIn – Mail – Get in touch by – Instagram – LinkedIn – Mail – Get in touch by – Instagram – LinkedIn – Mail – 
+      </p>
+    </div>
+  </div>
+
+
+  <script>
+    document.querySelectorAll('.contact-info p').forEach(function(p) {
+      p.setAttribute('data-marquee', p.textContent);
+    });
+  </script>
+</body>
+</html>
