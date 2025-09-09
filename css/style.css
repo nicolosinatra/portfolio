@@ -32,6 +32,11 @@ p{
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .desktop-home {
   position: relative;
   min-height: 100vh;
@@ -53,6 +58,7 @@ p{
   font-weight: 400;
   line-height: normal;
   width: 245px;
+  z-index: 1;
 }
 
 .filters {
@@ -97,7 +103,7 @@ p{
   margin-bottom: 0;
 }
 
-.project span {
+.project a {
   --project-line-height: 0.833;
   font-family: 'Neue Regrade', Arial, sans-serif;
   font-size: 18vw;
@@ -112,7 +118,7 @@ p{
   display: block;
 }
 
-.project span:hover {
+.project a:hover {
   line-height: calc(var(--project-line-height) * 1em);
   text-decoration-line: underline;
   text-decoration-style: dotted;
@@ -197,7 +203,7 @@ p{
     max-width: 100vw;
   }
 
-  .project span {
+  .project a {
     font-size: 18vw;
   }
 
@@ -217,7 +223,7 @@ p{
   }
 
   .header {
-    font-size: 18px;
+    font-size: 28px;
     width: 110px;
     top: 8px;
     left: 8px;
@@ -229,7 +235,7 @@ p{
   }
 
   .filter-btn {
-    font-size: 14px;
+    font-size: 21px;
   }
 
   .project-list {
@@ -240,7 +246,7 @@ p{
     max-width: 100vw;
   }
 
-  .project span {
+  .project a {
     font-size: 18vw;
     word-break: break-word;
     text-align: right;
@@ -250,8 +256,440 @@ p{
   }
 
   .contact-info {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 18px;
     padding: 0 4px;
   }
+}
+
+
+
+
+/* ARC */
+
+
+/* --- LAYOUT PRINCIPALE ARC --- */
+.arc-main {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 1728px;
+  margin: 0 auto;
+}
+
+.arc-author {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  z-index: 10;
+}
+
+.arc-contact-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #1a1a1a;
+  color: #fafafa;
+  font-size: 20px;
+  padding: 10px 33px;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.arc-content {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.arc-title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arc-title {
+  font-size: 250px;
+  font-weight: 400;
+  line-height: 210px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.arc-desc-section {
+  margin: 40px 0 60px 0;
+  font-size: 20px;
+  line-height: 22px;
+  max-width: 1200px;
+}
+
+.arc-hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.arc-hero-img img {
+  width: 600px;
+  height: 745px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.arc-hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 32px;
+  width: 400px;
+}
+
+.arc-info-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 8px;
+}
+
+.arc-info-label {
+  width: 170px;
+  font-weight: 400;
+}
+
+.arc-info-value {
+  flex: 1;
+}
+
+.arc-link-underline {
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.arc-section {
+  margin: 100px 0;
+}
+
+.arc-section h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 100px;
+}
+
+.arc-section-flex {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.arc-section-text {
+  width: 548px;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.arc-section-visual {
+  position: relative;
+  width: 812px;
+  height: 812px;
+}
+
+.arc-section-visual img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.arc-section-visual-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #1d1d1b;
+  font-weight: 400;
+  text-align: center;
+  width: 102px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arc-section-visual-label2 {
+  position: absolute;
+  left: 734px;
+  top: 24px;
+  font-size: 40px;
+  color: #1d1d1b;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.arc-section-visual-label3 {
+  position: absolute;
+  left: 734px;
+  top: 737px;
+  font-size: 40px;
+  color: #1d1d1b;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.arc-section-visual-bottom {
+  position: absolute;
+  left: 567px;
+  top: 599px;
+  width: 497px;
+  height: 188px;
+}
+
+.arc-section-visual-top {
+  position: absolute;
+  left: 686px;
+  top: 73px;
+  width: 290px;
+  height: 39px;
+}
+
+.arc-section-img-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.arc-section-img-row img {
+  width: 1117px;
+  height: 898px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: grayscale(100%);
+}
+
+.arc-section-img-text {
+  width: 548px;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.arc-logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.arc-logo-img {
+  width: 822px;
+  height: 231px;
+  object-fit: contain;
+}
+
+.arc-logo-desc {
+  width: 548px;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0 auto;
+}
+
+.arc-colors-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.arc-color-sample {
+  width: 205px;
+  height: 205px;
+  border: 1px solid #1a1a1a;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 20px;
+  color: #1a1a1a;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.arc-typography-row {
+  display: flex;
+  gap: 32px;
+}
+
+.arc-typography-sample {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 180px;
+}
+
+.arc-typography-sample span:first-child {
+  font-size: 20px;
+}
+
+.arc-typography-big {
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 400;
+}
+
+.arc-exhibition-desc {
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+}
+
+.arc-exhibition-img-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.arc-exhibition-img-row img {
+  width: 1490px;
+  height: 1486px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: grayscale(100%);
+}
+
+.arc-exhibition-img-text {
+  width: 548px;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.arc-exhibition-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.arc-exhibition-gallery img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.arc-exhibition-gallery-row {
+  display: flex;
+  gap: 40px;
+}
+
+.arc-exhibition-gallery-row img {
+  width: 835px;
+  height: 557px;
+}
+
+.arc-itinerari-desc {
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+}
+
+.arc-itinerari-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.arc-itinerari-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 923px;
+}
+
+.arc-itinerari-col img {
+  width: 923px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.arc-itinerari-cols {
+  display: flex;
+  gap: 40px;
+}
+
+.arc-itinerari-cols > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 373px;
+}
+
+.arc-itinerari-cols img {
+  width: 373px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.arc-itinerari-label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.arc-webapp-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.arc-webapp-gallery img {
+  width: 250px;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px 4px rgba(0,0,0,0.25);
+  filter: grayscale(100%);
+}
+
+.arc-backtotop {
+  margin-top: 80px;
+  text-align: left;
+}
+
+.arc-backtotop a {
+  font-size: 32px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+  cursor: pointer;
+}
+
+/* --- RESPONSIVE ARC --- */
+@media (max-width: 1200px) {
+  .arc-title { font-size: 120px; line-height: 110px; }
+  .arc-hero-img img { width: 350px; height: 400px; }
+  .arc-section-visual { width: 400px; height: 400px; }
+  .arc-section-flex { flex-direction: column; gap: 24px; }
+  .arc-section-text, .arc-section-img-text, .arc-logo-desc { width: 100%; }
+  .arc-section-img-row img, .arc-itinerari-col img, .arc-itinerari-cols img { width: 100%; }
+  .arc-webapp-gallery img { width: 120px; height: 260px; }
 }
