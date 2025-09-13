@@ -46,8 +46,21 @@ a{
   flex-direction: column;
 }
 
-.header {
+.header-fixed {
   position: fixed;
+  top: 20px;
+  left: 20px;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+  font-size: 40px;
+  color: #1a1a1a;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 1;
+}
+
+.header {
+  position: absolute;
   top: 20px;
   left: 20px;
   font-family: 'Neue Regrade', Arial, sans-serif;
@@ -266,46 +279,13 @@ a{
 .arc-main {
   position: relative;
   min-height: 100vh;
-  padding: 20px;
-  max-width: 1728px;
-  margin: 0 auto;
-}
-
-.arc-author {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 40px;
-  font-weight: 400;
-  z-index: 10;
-}
-
-.arc-contact-bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100vw;
-  background: #1a1a1a;
-  color: #fafafa;
-  font-size: 20px;
-  padding: 10px 33px;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 10;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 60px;
 }
 
-.arc-content {
-  padding-top: 80px;
-  padding-bottom: 120px;
-}
-
-.arc-title-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.arc-title {
+.project-title {
   font-size: 250px;
   font-weight: 400;
   line-height: 210px;
@@ -314,58 +294,74 @@ a{
   margin: 0;
 }
 
-.arc-desc-section {
-  margin: 40px 0 60px 0;
+.project-desc {
+  margin: 10px 0 60px 0;
   font-size: 20px;
   line-height: 22px;
-  max-width: 1200px;
 }
 
-.arc-hero {
+.project-hero {
   display: flex;
   gap: 40px;
   align-items: flex-start;
   margin-bottom: 80px;
 }
 
-.arc-hero-img img {
-  width: 600px;
-  height: 745px;
+.project-hero-img{
+  width: 65%;
+}
+
+.project-hero-img img {
+  width: 100%;
+  height: auto;
   object-fit: cover;
   filter: grayscale(100%);
-  border-radius: 8px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
 }
 
-.arc-hero-info {
+.project-hero-img img:hover {
+  filter: none;
+}
+
+.project-hero-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   font-size: 32px;
-  width: 400px;
+  width: 35%;
 }
 
-.arc-info-row {
+.project-info-row {
   display: flex;
-  gap: 24px;
-  align-items: center;
+  align-items: left;
   border-bottom: 1px solid #1a1a1a;
-  padding-bottom: 8px;
+  padding: 15px 0;
 }
 
-.arc-info-label {
-  width: 170px;
+.project-info-row:first-child {
+  border-top: 1px solid #1a1a1a;
+}
+
+.project-info-label {
+  width: 30%;
   font-weight: 400;
 }
 
-.arc-info-value {
+.project-info-value {
   flex: 1;
 }
 
-.arc-link-underline {
+.project-link-underline {
   text-decoration: underline;
   text-underline-position: from-font;
 }
+
+
+
+
+
+
+
+
+
 
 .arc-section {
   margin: 100px 0;
