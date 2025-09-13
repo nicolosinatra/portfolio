@@ -44,7 +44,6 @@ a{
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 470px;
 }
 
 .header {
@@ -89,8 +88,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-bottom: 50px;
-  gap: 0;
+  padding-bottom: 200px;
 }
 
 .project {
@@ -194,7 +192,7 @@ a{
   }
 
   .project-list {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 
   .project {
@@ -208,7 +206,7 @@ a{
   .contact-info {
     font-size: 16px;
     line-height: 28px;
-    padding: 4px 8px;
+    padding: 4px;
   }
 }
 
@@ -237,7 +235,7 @@ a{
   }
 
   .project-list {
-    padding-bottom: 15px;
+    padding-bottom: 150px;
   }
 
   .project {
