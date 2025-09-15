@@ -140,7 +140,7 @@ a{
 .header {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 120px;
   font-family: 'Neue Regrade', Arial, sans-serif;
   font-size: 40px;
   color: #1a1a1a;
@@ -381,6 +381,7 @@ a{
   line-height: 210px;
   text-transform: uppercase;
   letter-spacing: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -459,7 +460,7 @@ a{
 .section-row {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
 }
 
 .desc-text{
@@ -731,7 +732,7 @@ a{
 
 .backtotop {
   margin-top: 80px;
-  margin-left: 20px;
+  margin-left: 120px;
   text-align: left;
   padding-bottom: 80px;
 }
