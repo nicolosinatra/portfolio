@@ -37,21 +37,70 @@ a{
   color: inherit;
 }
 
+/* 1. Contenuto a sinistra (orizzontale) */
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 2. Contenuto al centro (orizzontale) */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3. Contenuto a destra (orizzontale) */
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 4. Contenuto in alto (verticale) */
+.flex-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 5. Contenuto al centro (verticale) */
+.flex-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 6. Contenuto in basso (verticale) */
+.flex-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Padding inferiore 50px */
 .pad-bottom-50{
   padding-bottom: 50px;
   box-sizing: border-box;
 }
 
+/* Padding superiore 50px */
 .pad-top-50{
   padding-top: 50px;
   box-sizing: border-box;
 }
 
+/* Padding inferiore 100px */
 .pad-bottom-100{
   padding-bottom: 100px;
   box-sizing: border-box;
 }
 
+/* Padding superiore 100px */
 .pad-top-100{
   padding-top: 100px;
   box-sizing: border-box;
@@ -441,7 +490,7 @@ a{
     width: 100%;     
     height: auto;
     overflow: hidden;
-    padding: 0 20px;
+    padding: 0;
   }
 
 
