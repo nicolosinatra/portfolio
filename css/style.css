@@ -421,7 +421,7 @@ a{
   width: 50vw;
   height: auto;
   object-fit: contain;
-  margin: 0 auto 100px auto;
+  margin: 0 auto;
   display: block;
 }
 
