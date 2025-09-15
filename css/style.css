@@ -77,9 +77,16 @@ a{
 /* 6. Contenuto in basso (verticale) */
 .flex-bottom {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Padding inferiore 50px */
@@ -105,6 +112,8 @@ a{
   padding-top: 100px;
   box-sizing: border-box;
 }
+
+/* ------------------------------------------------------------------------------ HOME ------------------------------------------------------------------------------ */
 
 .desktop-home {
   position: relative;
@@ -353,7 +362,7 @@ a{
 
 
 
-/* ARC */
+/* ------------------------------------------------------------------------------ ARC ------------------------------------------------------------------------------ */
 
 
 /* --- LAYOUT PRINCIPALE ARC --- */
@@ -362,7 +371,7 @@ a{
   min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 120px;
   margin-top: 60px;
 }
 
@@ -465,9 +474,22 @@ a{
 .contenuto-visivo{
   width: 65%;
   box-sizing: border-box;
+  align-items: stretch;
+}
+
+.contenuto-visivo-full{
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
 }
 
 .contenuto-visivo img {
+  width: 100%;
+  height: auto;
+  object-fit:contain;
+}
+
+.contenuto-visivo-full img {
   width: 100%;
   height: auto;
   object-fit:contain;
@@ -493,8 +515,213 @@ a{
     padding: 0;
   }
 
+/* Colors section */
+.colors-section {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.color-card {
+    background-color: #fafafa;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px 10px 5px 10px;
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    flex-shrink: 0;
+}
+
+.color-sample {
+    flex: 1;
+    width: 100%;
+    border: 1px solid #1a1a1a;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+.color-label {
+    font-family: 'Neue Regrade', 'Inter', sans-serif;
+    line-height: 0;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+}
+
+.color-label p {
+    line-height: 22px;
+}
 
 
+/* Typography section */
+.typography-section {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.font-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 35vw;
+}
+
+.font-divider {
+    position: relative;
+    height: 2px;
+    width: 100%;
+}
+
+.font-divider svg {
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+    right: 0;
+    top: -0.5px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.font-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.font-name {
+    font-family: 'Neue Regrade', 'Inter', sans-serif;
+    line-height: 0;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+}
+
+.font-name p {
+    line-height: 22px;
+    white-space: pre;
+}
+
+.font-sample {
+    position: relative;
+}
+
+.font-sample svg {
+    display: block;
+}
+
+.manifesto-section{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.manifesto-section .section-title{
+  width: 100%;
+}
+
+.manifesto-section .manifesto-image, .manifesto-image img{
+  width: 100%;
+}
+
+.itinerario-grid-container{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.itinerario-grid-container .grid-row{
+  display: flex;
+  gap: 10px;
+}
+
+.itinerario-card{
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itinerario-card img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mockup-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Container delle righe */
+.row-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Container per coppie di telefoni */
+.phone-container {
+    flex: 1;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 1px;
+    min-width: 1px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Mockup dei telefoni - stile base */
+.phone-mockup {
+    flex: 1;
+    min-height: 1px;
+    min-width: 1px;
+    flex-shrink: 0;
+}
+
+/* Immagini di background per ogni telefono */
+.phone-mockup img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;    
+}
 
 
 
@@ -531,307 +758,3 @@ a{
 
 
 
-
-
-
-
-
-
-.arc-section-flex {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  margin-bottom: 60px;
-}
-
-.project-section-text {
-  width: 548px;
-  font-size: 20px;
-  line-height: 22px;
-}
-
-.arc-section-visual {
-  position: relative;
-  width: 812px;
-  height: 812px;
-}
-
-.arc-section-visual img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.arc-section-visual-label {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  color: #1d1d1b;
-  font-weight: 400;
-  text-align: center;
-  width: 102px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arc-section-visual-label2 {
-  position: absolute;
-  left: 734px;
-  top: 24px;
-  font-size: 40px;
-  color: #1d1d1b;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.arc-section-visual-label3 {
-  position: absolute;
-  left: 734px;
-  top: 737px;
-  font-size: 40px;
-  color: #1d1d1b;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.arc-section-visual-bottom {
-  position: absolute;
-  left: 567px;
-  top: 599px;
-  width: 497px;
-  height: 188px;
-}
-
-.arc-section-visual-top {
-  position: absolute;
-  left: 686px;
-  top: 73px;
-  width: 290px;
-  height: 39px;
-}
-
-.arc-section-img-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-top: 40px;
-}
-
-.arc-section-img-row img {
-  width: 1117px;
-  height: 898px;
-  object-fit: cover;
-  border-radius: 8px;
-  filter: grayscale(100%);
-}
-
-.arc-section-img-text {
-  width: 548px;
-  font-size: 20px;
-  line-height: 22px;
-}
-
-.arc-logo-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.arc-logo-img {
-  width: 822px;
-  height: 231px;
-  object-fit: contain;
-}
-
-.arc-logo-desc {
-  width: 548px;
-  font-size: 20px;
-  line-height: 22px;
-  margin: 0 auto;
-}
-
-.arc-colors-row {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-.arc-color-sample {
-  width: 205px;
-  height: 205px;
-  border: 1px solid #1a1a1a;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-size: 20px;
-  color: #1a1a1a;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
-.arc-typography-row {
-  display: flex;
-  gap: 32px;
-}
-
-.arc-typography-sample {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  width: 180px;
-}
-
-.arc-typography-sample span:first-child {
-  font-size: 20px;
-}
-
-.arc-typography-big {
-  font-size: 100px;
-  line-height: 100px;
-  font-weight: 400;
-}
-
-.arc-exhibition-desc {
-  font-size: 20px;
-  line-height: 22px;
-  margin-bottom: 40px;
-  max-width: 1200px;
-}
-
-.arc-exhibition-img-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-
-.arc-exhibition-img-row img {
-  width: 1490px;
-  height: 1486px;
-  object-fit: cover;
-  border-radius: 8px;
-  filter: grayscale(100%);
-}
-
-.arc-exhibition-img-text {
-  width: 548px;
-  font-size: 20px;
-  line-height: 22px;
-}
-
-.arc-exhibition-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.arc-exhibition-gallery img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  filter: grayscale(100%);
-}
-
-.arc-exhibition-gallery-row {
-  display: flex;
-  gap: 40px;
-}
-
-.arc-exhibition-gallery-row img {
-  width: 835px;
-  height: 557px;
-}
-
-.arc-itinerari-desc {
-  font-size: 20px;
-  line-height: 22px;
-  margin-bottom: 40px;
-  max-width: 1200px;
-}
-
-.arc-itinerari-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.arc-itinerari-col {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 923px;
-}
-
-.arc-itinerari-col img {
-  width: 923px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  filter: grayscale(100%);
-}
-
-.arc-itinerari-cols {
-  display: flex;
-  gap: 40px;
-}
-
-.arc-itinerari-cols > div {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 373px;
-}
-
-.arc-itinerari-cols img {
-  width: 373px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  filter: grayscale(100%);
-}
-
-.arc-itinerari-label {
-  font-size: 20px;
-  font-weight: 400;
-  color: #1a1a1a;
-  margin-bottom: 4px;
-}
-
-.arc-webapp-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.arc-webapp-gallery img {
-  width: 250px;
-  height: 540px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 4px 18px 4px rgba(0,0,0,0.25);
-  filter: grayscale(100%);
-}
-
-
-
-/* --- RESPONSIVE ARC --- */
-@media (max-width: 1200px) {
-  .arc-title { font-size: 120px; line-height: 110px; }
-  .arc-hero-img img { width: 350px; height: 400px; }
-  .arc-section-visual { width: 400px; height: 400px; }
-  .arc-section-flex { flex-direction: column; gap: 24px; }
-  .arc-section-text, .arc-section-img-text, .arc-logo-desc { width: 100%; }
-  .arc-section-img-row img, .arc-itinerari-col img, .arc-itinerari-cols img { width: 100%; }
-  .arc-webapp-gallery img { width: 120px; height: 260px; }
-}
