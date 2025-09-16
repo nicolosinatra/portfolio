@@ -20,22 +20,66 @@
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #fafafa;
-  font-family: 'Neue Regrade', Arial, sans-serif;
+/* ------------------------------------------------------------------------------ Design System ------------------------------------------------------------------------------ */
+
+/* Default: Desktop */
+.font-titoli-progetti {
+  font-size: 250px;
+  line-height: 200px;
 }
 
-p{
-  margin: 0;
-  padding: 0;
+.font-header-2 {
+  font-size: 40px;
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
+.font-header-3 {
+  font-size: 32px;
 }
+
+.font-body {
+  font-size: 18px;
+}
+
+/* Tablet: max 1024px */
+@media (max-width: 1024px) {
+  .font-titoli-progetti {
+    font-size: 115px;
+    line-height: 85px;
+  }
+
+  .font-header-2 {
+    font-size: 28px;
+  }
+
+  .font-header-3 {
+    font-size: 24px;
+  }
+
+  .font-body {
+    font-size: 16px;
+  }
+}
+
+/* Mobile: max 600px */
+@media (max-width: 600px) {
+  .font-titoli-progetti {
+    font-size: 50px;
+    line-height: 40px;
+  }
+
+  .font-header-2 {
+    font-size: 24px;
+  }
+
+  .font-header-3 {
+    font-size: 20px;
+  }
+
+  .font-body {
+    font-size: 14px;
+  }
+}
+
 
 /* 1. Contenuto a sinistra (orizzontale) */
 .flex-left {
@@ -113,6 +157,52 @@ a{
   box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------------------------ GLOBAL ------------------------------------------------------------------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  font-family: 'Neue Regrade', Arial, sans-serif;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: 'Neue Regrade', Arial, sans-serif;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 20px 100px;
+  margin-top: 60px;
+}
+
+/* Tablet: max 1024px */
+@media (max-width: 1024px) {
+  .main{
+    padding: 20px 24px;
+  }
+}
+
+/* Mobile: max 600px */
+@media (max-width: 600px) {
+  .main{
+    padding: 20px 16px;
+  }
+}
+
 /* ------------------------------------------------------------------------------ HOME ------------------------------------------------------------------------------ */
 
 .desktop-home {
@@ -128,12 +218,6 @@ a{
   position: fixed;
   top: 20px;
   left: 20px;
-  font-family: 'Neue Regrade', Arial, sans-serif;
-  font-size: 40px;
-  color: #1a1a1a;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   z-index: 1;
 }
 
@@ -141,12 +225,6 @@ a{
   position: absolute;
   top: 20px;
   left: 120px;
-  font-family: 'Neue Regrade', Arial, sans-serif;
-  font-size: 40px;
-  color: #1a1a1a;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   z-index: 1;
 }
 
@@ -164,7 +242,6 @@ a{
   padding: 0;
   margin: 0;
   cursor: pointer;
-  font-family: 'Neue Regrade', Arial, sans-serif;
   font-size: 32px;
   color: #1a1a1a;
   text-align: left;
@@ -193,7 +270,6 @@ a{
 
 .project a {
   --project-line-height: 0.833;
-  font-family: 'Neue Regrade', Arial, sans-serif;
   font-size: 18vw;
   color: #1a1a1a;
   text-transform: uppercase;
@@ -224,7 +300,6 @@ a{
   width: 100vw;
   background: #1a1a1a;
   color: #fafafa;
-  font-family: 'Neue Regrade', Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 35px;
@@ -260,7 +335,7 @@ a{
   }
 }
 
-/* TABLET: max-width 1024px */
+/* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
   .desktop-home {
     padding: 0 16px;
@@ -307,7 +382,7 @@ a{
 }
 
 
-/* MOBILE: max-width 600px */
+/* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
   .desktop-home {
     padding: 8px;
@@ -366,15 +441,6 @@ a{
 
 
 /* --- LAYOUT PRINCIPALE ARC --- */
-.arc-main {
-  position: relative;
-  min-height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  padding: 20px 120px;
-  margin-top: 60px;
-}
-
 .project-title {
   font-size: 250px;
   font-weight: 400;
@@ -468,8 +534,6 @@ a{
   border-top: 1px solid #1a1a1a;
   padding-top: 15px;
   box-sizing: border-box;
-  font-size: 20px;
-  line-height: 22px;
 }
 
 .contenuto-visivo{
@@ -548,7 +612,6 @@ a{
 }
 
 .color-label {
-    font-family: 'Neue Regrade', 'Inter', sans-serif;
     line-height: 0;
     font-style: normal;
     font-size: 20px;
@@ -607,7 +670,6 @@ a{
 }
 
 .font-name {
-    font-family: 'Neue Regrade', 'Inter', sans-serif;
     line-height: 0;
     font-style: normal;
     font-size: 20px;
@@ -724,11 +786,362 @@ a{
   object-fit: contain;    
 }
 
+.backtotop {
+  margin-top: 80px;
+  margin-left: 120px;
+  text-align: left;
+  padding-bottom: 80px;
+}
+
+.backtotop a {
+  font-size: 32px;
+  color: #1a1a1a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* -------------------------------------- TABLET: max-width 1024px */
+@media (max-width: 1024px) {
+  
+.project-title {
+  font-size: 115px;
+  line-height: 80px;
+}
+
+.project-desc {
+  margin: 10px 0 60px 0;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.project-hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.project-hero-img{
+  width: 65%;
+}
+
+.project-hero-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.project-hero-img img:hover {
+  filter: none;
+}
+
+.project-hero-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  width: 35%;
+}
+
+.project-info-row {
+  display: flex;
+  align-items: left;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 15px 0;
+}
+
+.project-info-row:first-child {
+  border-top: 1px solid #1a1a1a;
+}
+
+.project-info-label {
+  width: 30%;
+  font-weight: 400;
+}
+
+.project-info-value {
+  flex: 1;
+}
+
+.project-link-underline {
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.new-section {
+  border-top: 1px solid #1a1a1a;
+  margin: 50px 0 100px 0;
+  padding: 15px 0;
+}
+
+.new-section h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin:0;
+  text-transform: uppercase;
+}
+
+.section-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.desc-text{
+  width: 35%;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+.contenuto-visivo{
+  width: 65%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.contenuto-visivo-full{
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.contenuto-visivo img {
+  width: 100%;
+  height: auto;
+  object-fit:contain;
+}
+
+.contenuto-visivo-full img {
+  width: 100%;
+  height: auto;
+  object-fit:contain;
+}
+
+.contenuto-visivo .schema {
+  padding-left: 100px;
+  box-sizing: border-box;
+}
+
+.logo-arc{
+  width: 50vw;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.animazione-logo {
+    width: 100%;     
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+  }
+
+/* Colors section */
+.colors-section {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.color-card {
+    background-color: #fafafa;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px 10px 5px 10px;
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    flex-shrink: 0;
+}
+
+.color-sample {
+    flex: 1;
+    width: 100%;
+    border: 1px solid #1a1a1a;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+.color-label {
+    line-height: 0;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+}
+
+.color-label p {
+    line-height: 22px;
+}
 
 
+/* Typography section */
+.typography-section {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
 
+.font-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 35vw;
+}
 
+.font-divider {
+    position: relative;
+    height: 2px;
+    width: 100%;
+}
 
+.font-divider svg {
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+    right: 0;
+    top: -0.5px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.font-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.font-name {
+    line-height: 0;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+}
+
+.font-name p {
+    line-height: 22px;
+    white-space: pre;
+}
+
+.font-sample {
+    position: relative;
+}
+
+.font-sample svg {
+    display: block;
+}
+
+.manifesto-section{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.manifesto-section .section-title{
+  width: 100%;
+}
+
+.manifesto-section .manifesto-image, .manifesto-image img{
+  width: 100%;
+}
+
+.itinerario-grid-container{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.itinerario-grid-container .grid-row{
+  display: flex;
+  gap: 10px;
+}
+
+.itinerario-card{
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itinerario-card img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mockup-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Container delle righe */
+.row-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Container per coppie di telefoni */
+.phone-container {
+    flex: 1;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 1px;
+    min-width: 1px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Mockup dei telefoni - stile base */
+.phone-mockup {
+    flex: 1;
+    min-height: 1px;
+    min-width: 1px;
+    flex-shrink: 0;
+}
+
+/* Immagini di background per ogni telefono */
+.phone-mockup img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;    
+}
 
 .backtotop {
   margin-top: 80px;
@@ -741,8 +1154,14 @@ a{
   font-size: 32px;
   color: #1a1a1a;
   text-decoration: none;
-  font-family: 'Neue Regrade', Arial, sans-serif;
   cursor: pointer;
+}
+}
+
+
+/* -------------------------------------- MOBILE: max-width 600px */
+@media (max-width: 600px) {
+  
 }
 
 
