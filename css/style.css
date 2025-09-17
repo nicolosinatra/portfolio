@@ -22,6 +22,16 @@
 
 /* ------------------------------------------------------------------------------ Design System ------------------------------------------------------------------------------ */
 
+/* Variabili CSS */
+:root {
+    --gutter-small: 16px; /* spazio tra le colonne (gutter) piccolo */
+    --gutter-medium: 24px; /* spazio tra le colonne (gutter) medio */
+    --gutter-large: 32px; /* spazio tra le colonne (gutter) grande */
+    --margin-small: 16px; /* Margine per piccole distanze */
+    --margin-medium: 24px; /* Margine medio */
+    --margin-large: 100px; /* Margine grande */
+}
+
 /* Default: Desktop */
 h1 {
   font-size: 250px;
