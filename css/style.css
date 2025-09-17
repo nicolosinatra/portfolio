@@ -24,9 +24,9 @@
 
 /* Variabili CSS */
 :root {
-    --gutter-small: 16px;  /* spazio tra le colonne (gutter) piccolo */
-    --gutter-medium: 24px; /* spazio tra le colonne (gutter) medio */
-    --gutter-large: 32px;  /* spazio tra le colonne (gutter) grande */
+    --gutter-small: 20px;  /* spazio tra le colonne (gutter) piccolo */
+    --gutter-medium: 25px; /* spazio tra le colonne (gutter) medio */
+    --gutter-large: 30px;  /* spazio tra le colonne (gutter) grande */
 
     --margin-oriz-small: 16px;  /* Margine orizzontale per piccole distanze */
     --margin-oriz-medium: 24px; /* Margine orizzontale medio */
@@ -36,14 +36,20 @@
     --margin-vert-medium: 65px; /* Margine verticale medio */
     --margin-vert-large: 80px;  /* Margine verticale grande */
 
-    --spacing-new-section-large: 50px;  /* Spaziatura per nuove sezioni grande */
-    --spacing-new-section-medium: 30px; /* Spaziatura per nuove sezioni media */
-    --spacing-new-section-small: 16px;  /* Spaziatura per nuove sezioni piccola */
+    --spacing-new-section-large: 70px;  /* Spaziatura per nuove sezioni grande */
+    --spacing-new-section-medium: 40px; /* Spaziatura per nuove sezioni media */
+    --spacing-new-section-small: 20px;  /* Spaziatura per nuove sezioni piccola */
 
     --spacing-element-visivi-large: 100px;  /* Spaziatura tra elementi visivi grande */
     --spacing-element-visivi-medium: 50px;  /* Spaziatura tra elementi visivi media */
     --spacing-element-visivi-small: 32px;   /* Spaziatura tra elementi visivi piccola */  
-}
+
+    --spacing-text-large: 15px;  /* Spaziatura per nuove sezioni grande */
+    --spacing-text-medium: 10px; /* Spaziatura per nuove sezioni media */
+    --spacing-text-small: 0px;  /* Spaziatura per nuove sezioni piccola */
+
+
+  }
 
 /* Default: Desktop */
 h1 {
@@ -55,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 400;
   font-style: normal;
   line-height: 1;
@@ -76,15 +82,27 @@ p {
 }
 
 
-/* Padding inferiore 50px */
+/* Padding bottom new-section */
 .pad-bottom-section{
   padding-bottom: var(--spacing-new-section-large);
   box-sizing: border-box;
 }
 
-/* Padding superiore 50px */
+/* Padding top new-section */
 .pad-top-section{
   padding-top: var(--spacing-new-section-large);
+  box-sizing: border-box;
+}
+
+/* Padding top text */
+.pad-top-text{
+  padding-top: var(--spacing-text-large);
+  box-sizing: border-box;
+}
+
+/* Padding bottom text */
+.pad-bottom-text{
+  padding-bottom: var(--spacing-text-large);
   box-sizing: border-box;
 }
 
@@ -104,6 +122,10 @@ p {
   gap: var(--gutter-large);
 }
 
+.gap-text {
+  gap: var(--spacing-text-large);
+}
+
 
 /* Tablet: max 1024px */
 @media (max-width: 1024px) {
@@ -113,7 +135,7 @@ p {
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   h3 {
@@ -132,6 +154,14 @@ p {
     padding-top: var(--spacing-new-section-medium);
   }
 
+  .pad-bottom-text{
+    padding-bottom: var(--spacing-text-medium);
+  }
+
+  .pad-top-text{
+    padding-top: var(--spacing-text-medium);
+  }
+
   .pad-bottom-elementi-visivi{
     padding-bottom: var(--spacing-element-visivi-medium);
   }
@@ -143,6 +173,10 @@ p {
   .gap{
     gap: var(--gutter-medium);
   }
+
+  .gap-text {
+    gap: var(--spacing-text-medium);
+  }
 }
 
 /* Mobile: max 600px */
@@ -153,7 +187,7 @@ p {
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   h3 {
@@ -172,6 +206,14 @@ p {
     padding-top: var(--spacing-new-section-small);
   }
 
+  .pad-bottom-text{
+    padding-bottom: var(--spacing-text-small);
+  }
+
+  .pad-top-text{
+    padding-top: var(--spacing-text-small);
+  }
+
   .pad-bottom-elementi-visivi{
     padding-bottom: var(--spacing-element-visivi-small);
   }
@@ -182,6 +224,10 @@ p {
 
   .gap{
     gap: var(--gutter-small);
+  }
+
+  .gap-text {
+    gap: var(--spacing-text-small);
   }
 }
 
@@ -259,6 +305,28 @@ a{
 
 button {
   font-family: 'Neue Regrade', Arial, sans-serif;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  z-index: 1;
+}
+
+.header h2, .header-fixed h2 {
+  font-size: 40px;
+  color: #1a1a1a;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .main {
@@ -341,7 +409,7 @@ button {
 
 .new-section {
   border-top: 1px solid #1a1a1a;
-  padding-top: 15px;
+  padding-top: 8px;
   margin:0;
   text-transform: uppercase;
 }
@@ -380,6 +448,10 @@ button {
   width: 100%;
   height: auto;
   object-fit:contain;
+}
+
+.img-affiancate{
+  flex-direction: row;
 }
 
 
@@ -430,6 +502,7 @@ button {
 
 /* Typography section */
 .typography-section {
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -442,7 +515,7 @@ button {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 35vw;
+    width: 100%;
 }
 
 .font-divider {
@@ -468,7 +541,7 @@ button {
     align-items: flex-start;
     justify-content: flex-start;
     flex-shrink: 0;
-    gap:10px;
+    gap: 10px;
 }
 
 .font-name {
@@ -490,10 +563,16 @@ button {
 
 .font-sample svg {
     display: block;
+    height: 65px;
+    width: auto;
 }
 
 /* ----------------------------------------- Tablet: max 1024px */
 @media (max-width: 1024px) {
+  .header h2, .header-fixed h2 {
+    font-size: 28px;
+  }
+
   .main{
     margin-top: var(--margin-vert-medium);
     padding: 0 var(--margin-oriz-medium);
@@ -518,6 +597,9 @@ button {
   .desc-text{
     width: 100%;
     max-width: none;
+  }
+
+  .segue-img{
     margin-bottom: var(--spacing-element-visivi-medium);
   }
 
@@ -525,22 +607,42 @@ button {
     width: 100%;
   }
 
+  .img-affiancate{
+    flex-direction: row;
+  }
+
   .color-card{
     width: 20vw;
     height: 20vw;
     padding: 7px 7px 4px 7px;
+  }
+
+  .typography-section {
+    width: 100%;
+  }
+
+  .font-info{
+    gap: 5px;
+  }
+
+  .font-sample svg {
+    height: 30px;
   }
 }
 
 
 /* ----------------------------------------- Mobile: max 600px */
 @media (max-width: 600px) {
+  .header h2, .header-fixed h2 {
+    font-size: 24px;
+  }
+
   .main{
     margin-top: var(--margin-vert-small);
     padding: 0 var(--margin-oriz-small);
   }
 
-  .desc-text{
+  .segue-img{
     margin-bottom: var(--spacing-element-visivi-small);
   }
 
@@ -554,6 +656,10 @@ button {
     height: 25vw;
     padding: 7px 7px 4px 7px;
   }
+
+  .img-affiancate{
+    flex-direction: column;
+  }
 }
 
 /* ------------------------------------------------------------------------------ HOME ------------------------------------------------------------------------------ */
@@ -565,20 +671,6 @@ button {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-}
-
-.header-fixed {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1;
-}
-
-.header {
-  position: absolute;
-  top: 20px;
-  left: 100px;
-  z-index: 1;
 }
 
 .filters {
@@ -905,6 +997,7 @@ button {
 
 .backtotop {
   text-align: left;
+  margin-left: var(--margin-oriz-large);
   padding-bottom: 80px;
 }
 
@@ -921,12 +1014,34 @@ button {
     padding-left: 0;
   }
 
+  .manifesto-section {
+    width: 100%;
+  }
+
+  .itinerario-grid-container {
+    width: 100%;
+  }
+
+  .backtotop {
+    margin-left: var(--margin-oriz-medium);
+    padding-bottom: 70px;
+  }
 }
 
 
 /* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
-  
+   .itinerario-grid-container .grid-row {
+    flex-direction: column;
+  }
+  .itinerario-card {
+    width: 100%;
+  }
+
+  .backtotop {
+    margin-left: var(--margin-oriz-small);
+    padding-bottom: 60px; 
+  }
 }
 
 
