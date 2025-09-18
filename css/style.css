@@ -571,7 +571,7 @@ button {
   padding-bottom: 80px;
 }
 
-.backtotop a {
+.backtotop p {
   font-size: 32px;
   color: #1a1a1a;
   text-decoration: none;
@@ -640,7 +640,12 @@ button {
     height: 30px;
   }
 
-  .backtotop a {
+  .backtotop {
+    margin-left: var(--margin-oriz-medium);
+    padding-bottom: 60px; 
+  }
+
+  .backtotop p {
     font-size: 24px;
   }
 }
@@ -674,6 +679,12 @@ button {
 
   .img-affiancate{
     flex-direction: column;
+  }
+
+
+  .backtotop {
+    margin-left: var(--margin-oriz-small);
+    padding-bottom: 60px; 
   }
 }
 
@@ -1002,11 +1013,6 @@ button {
     width: 100%;
   }
 
-  .backtotop {
-    margin-left: var(--margin-oriz-medium);
-    padding-bottom: 70px;
-  }
-
   .row-container-mockup img {
     width: calc(25% - 7.5px); /* 4 per riga */
   }
@@ -1021,11 +1027,6 @@ button {
   }
   .itinerario-card {
     width: 100%;
-  }
-
-  .backtotop {
-    margin-left: var(--margin-oriz-small);
-    padding-bottom: 60px; 
   }
 
   .row-container-mockup img {
