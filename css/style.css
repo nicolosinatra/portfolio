@@ -544,8 +544,6 @@ button {
 
 .font-name {
     line-height: 0;
-    font-style: normal;
-    font-size: 20px;
     color: black;
     white-space: nowrap;
 }
@@ -633,7 +631,13 @@ button {
   }
 
   .font-info{
-    gap: 5px;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .font-sample{
+    padding-top: 5px;
   }
 
   .font-sample svg {
@@ -675,6 +679,11 @@ button {
     width:28%;
     height: 25vw;
     padding: 7px 7px 4px 7px;
+  }
+
+  .font-info{
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .img-affiancate{
