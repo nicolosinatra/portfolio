@@ -567,6 +567,19 @@ button {
     width: auto;
 }
 
+.backtotop {
+  text-align: left;
+  margin-left: var(--margin-oriz-large);
+  padding-bottom: 80px;
+}
+
+.backtotop a {
+  font-size: 32px;
+  color: #1a1a1a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* ----------------------------------------- Tablet: max 1024px */
 @media (max-width: 1024px) {
   .header h2, .header-fixed h2 {
@@ -627,6 +640,10 @@ button {
 
   .font-sample svg {
     height: 30px;
+  }
+
+  .backtotop a {
+    font-size: 24px;
   }
 }
 
@@ -959,53 +976,18 @@ button {
     flex-shrink: 0;
 }
 
-/* Container delle righe */
-.row-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    flex-shrink: 0;
+/* Container delle due righe di mockup */
+.row-container-mockup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-/* Container per coppie di telefoni */
-.phone-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 1px;
-    min-width: 1px;
-    position: relative;
-    flex-shrink: 0;
-}
-
-/* Mockup dei telefoni - stile base */
-.phone-mockup {
-    flex: 1;
-    min-height: 1px;
-    min-width: 1px;
-    flex-shrink: 0;
-}
-
-/* Immagini di background per ogni telefono */
-.phone-mockup img{
-  width: 100%;
+.row-container-mockup img {
+  width: calc(16.66% - 8.33px); /* 6 per riga */
   height: auto;
-  object-fit: contain;    
-}
-
-.backtotop {
-  text-align: left;
-  margin-left: var(--margin-oriz-large);
-  padding-bottom: 80px;
-}
-
-.backtotop a {
-  font-size: 32px;
-  color: #1a1a1a;
-  text-decoration: none;
-  cursor: pointer;
+  object-fit: contain;
 }
 
 /* -------------------------------------- TABLET: max-width 1024px */
@@ -1026,6 +1008,11 @@ button {
     margin-left: var(--margin-oriz-medium);
     padding-bottom: 70px;
   }
+
+  .row-container-mockup img {
+    width: calc(25% - 7.5px); /* 4 per riga */
+  }
+
 }
 
 
@@ -1041,6 +1028,10 @@ button {
   .backtotop {
     margin-left: var(--margin-oriz-small);
     padding-bottom: 60px; 
+  }
+
+  .row-container-mockup img {
+    width: calc(50% - 5px); /* 2 per riga */
   }
 }
 
