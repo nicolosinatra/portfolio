@@ -4,4 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+/* Scrollare la pagina fino all'inizio con click */
+$(".backtotop").click(function() {
+    $("html").animate({ scrollTop: 0 }, "slow");
+});
+
+
+
     
