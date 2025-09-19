@@ -1133,6 +1133,18 @@ button {
 
 .qr-content{
   display: flex;
+  align-items: start;
+}
+
+.qr-code{
+  max-width: 40%;
+}
+
+.qr-text{
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 
@@ -1160,6 +1172,7 @@ button {
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
+    flex-direction: row-reverse;
   }
 
   .coppia-mockup, .coppia-mockup-2{
