@@ -1029,12 +1029,12 @@ button {
 .row-container-mockup {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
 }
 
 .row-container-mockup img {
-  width: calc(16.66% - 8.33px); /* 6 per riga */
+  width: calc(16% - 8.33px); /* 6 per riga */
   height: auto;
   object-fit: contain;
 }
@@ -1054,7 +1054,7 @@ button {
   }
 
   .row-container-mockup img {
-    width: calc(25% - 7.5px); /* 4 per riga */
+    width: calc(24% - 7.5px); /* 4 per riga */
   }
 
 }
@@ -1070,7 +1070,7 @@ button {
   }
 
   .row-container-mockup img {
-    width: calc(50% - 5px); /* 2 per riga */
+    width: calc(48% - 5px); /* 2 per riga */
   }
 }
 
