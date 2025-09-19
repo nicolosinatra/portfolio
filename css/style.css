@@ -51,11 +51,10 @@
 
 /* Default: Desktop */
 h1 {
-  font-size: 250px;
-  line-height: 200px;
+  font-size: 13vw;
   font-weight: 400;
   font-style: normal;
-  line-height: 0.8;
+  line-height: 0.75;
 }
 
 h2 {
@@ -128,8 +127,7 @@ p {
 /* Tablet: max 1024px */
 @media (max-width: 1024px) {
   h1 {
-    font-size: 115px;
-    line-height: 85px;
+    font-size: 13vw;
   }
 
   h2 {
@@ -180,8 +178,7 @@ p {
 /* Mobile: max 600px */
 @media (max-width: 600px) {
   h1 {
-    font-size: 50px;
-    line-height: 40px;
+    font-size: 13vw
   }
 
   h2 {
@@ -672,13 +669,15 @@ button {
 
   .colors-section{
     justify-content: space-between;
-    gap:0;
+    gap: 5px;
+    flex-wrap: wrap;
   }
 
   .color-card{
     width:28%;
     height: 25vw;
     padding: 7px 7px 4px 7px;
+    min-width: 110px;
   }
 
   .font-info{
@@ -926,7 +925,7 @@ button {
   box-sizing: border-box;
 }
 
-.logo-arc{
+.logo-progetto {
   width: 50vw;
   height: auto;
   object-fit: contain;
@@ -1044,6 +1043,43 @@ button {
 }
 
 
+/* ------------------------------------------------------------------------------ SOTTOSALE ------------------------------------------------------------------------------ */
+.costruzione-logo{
+  width: 35%;
+  display: flex;
+  align-items: baseline;
+}
+
+.costruzione-logo svg{
+  height: auto;     /* mantiene l’aspetto */
+  object-fit: contain; /* evita deformazioni */
+}
+
+
+/* -------------------------------------- TABLET: max-width 1024px */
+@media (max-width: 1024px) {
+  .logo-progetto.sottosale {
+    width: 70vw;
+  }
+  .costruzione-logo{
+    width: 60%;
+    justify-content: center;
+  }
+
+
+}
+
+
+/* -------------------------------------- MOBILE: max-width 600px */
+@media (max-width: 600px) {
+  .logo-progetto.sottosale {
+    width: 80vw;
+  }
+  .costruzione-logo{
+    width: 80%;
+    justify-content: center;
+  }
+}
 
 
 
