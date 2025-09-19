@@ -703,10 +703,10 @@ button {
   }
 
   .color-card{
-    width:28%;
+    width:25%;
     height: 25vw;
     padding: 7px 7px 4px 7px;
-    min-width: 110px;
+    min-width: 90px;
   }
 
   .font-info{
