@@ -75,7 +75,7 @@ p {
   font-size: 20px;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 
@@ -562,6 +562,12 @@ button {
 
 .mockup-img{
   border-radius: 20px;
+  box-shadow: 0 4px 18px 4px rgba(0, 0, 0, 0.25);
+  margin: 5px 0;
+}
+
+.mockup-mobile-img{
+  border-radius: 10px;
   box-shadow: 0 4px 18px 4px rgba(0, 0, 0, 0.25);
   margin: 5px 0;
 }
@@ -1072,7 +1078,7 @@ button {
 }
 
 .left-section-sottosale-website{
-  width: 65%;
+  width: 75%;
   box-sizing: border-box;
 }
 
@@ -1085,6 +1091,32 @@ button {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.right-section-sottosale-website{
+  width: 18%;
+}
+
+.mobile-mockups-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-mockups-container img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.qr-section{
+  width: 100%;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 10px;
+}
+
+.qr-content{
+  display: flex;
 }
 
 
@@ -1103,6 +1135,18 @@ button {
     box-sizing: border-box;
   }
 
+  .right-section-sottosale-website{
+    width: 100%;
+  }
+
+  .mobile-mockups-container{
+    flex-direction: row;
+  }
+
+  .mobile-mockups-container img{
+    width: 20%;
+  }
+
 }
 
 
@@ -1114,6 +1158,16 @@ button {
   .costruzione-logo{
     width: 80%;
     justify-content: center;
+  }
+
+  .mobile-mockups-container{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .mobile-mockups-container img{
+    width: 40%;
   }
 }
 
