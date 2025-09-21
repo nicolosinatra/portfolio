@@ -851,13 +851,13 @@ button {
 .desktop-home {
   position: relative;
   min-height: 100vh;
-  padding: 20px;
+  padding: 80px 20px 0px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-.filters {
+/* .filters {
   position: fixed;
   left: 20px;
   bottom: 80px;
@@ -878,14 +878,14 @@ button {
   font-weight: 400;
   line-height: normal;
   white-space: nowrap;
-}
+} */
 
 .project-list {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-bottom: 200px;
+  padding-bottom: 40px;
 }
 
 .project {
@@ -967,20 +967,20 @@ button {
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
   .desktop-home {
-    padding: 0 16px;
+    padding: 70px var(--margin-oriz-medium) 0px;
   }
 
-  .filters {
+  /* .filters {
     left: 16px;
     bottom: 70px;
   }
 
   .filter-btn {
     font-size: 24px;
-  }
+  } */
 
   .project-list {
-    padding-bottom: 0px;
+    padding-bottom: 40px;
   }
 
   .project {
@@ -1002,10 +1002,10 @@ button {
 /* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
   .desktop-home {
-    padding: 8px;
+    padding: 60px var(--margin-oriz-small) 0px;
   }
 
-  .filters {
+  /* .filters {
     left: 8px;
     bottom: 60px;
     width: auto;
@@ -1013,11 +1013,7 @@ button {
 
   .filter-btn {
     font-size: 24px;
-  }
-
-  .project-list {
-    padding-bottom: 150px;
-  }
+  } */
 
   .project {
     max-width: 100vw;
