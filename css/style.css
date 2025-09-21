@@ -814,7 +814,11 @@ button {
     flex: 1 0 0;
     height: calc(width / 3 - 10px);
     padding: 7px 7px 4px 7px;
-    min-width: 90px;
+    min-width: 60px;
+  }
+  
+  .color-label p{
+    font-size: 13px;
   }
 
   .typography-section {
