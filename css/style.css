@@ -40,9 +40,9 @@
     --margin-oriz-medium: 24px; /* Margine orizzontale medio */
     --margin-oriz-large: 100px; /* Margine orizzontale grande */
 
-    --margin-vert-small: 55px;  /* Margine verticale per piccole distanze */
-    --margin-vert-medium: 65px; /* Margine verticale medio */
-    --margin-vert-large: 80px;  /* Margine verticale grande */
+    --margin-vert-small: 80px;  /* Margine verticale per piccole distanze */
+    --margin-vert-medium: 90px; /* Margine verticale medio */
+    --margin-vert-large: 100px;  /* Margine verticale grande */
 
     --spacing-new-section-large: 70px;  /* Spaziatura per nuove sezioni grande */
     --spacing-new-section-medium: 40px; /* Spaziatura per nuove sezioni media */
