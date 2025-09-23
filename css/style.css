@@ -623,7 +623,8 @@ button {
 
 .font-name p {
     line-height: 22px;
-    white-space: pre;
+    max-width: 200px;
+    text-wrap: auto;
 }
 
 .font-sample {
