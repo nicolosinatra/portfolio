@@ -54,7 +54,7 @@
 
     --spacing-text-large: 15px;  /* Spaziatura per nuove sezioni grande */
     --spacing-text-medium: 10px; /* Spaziatura per nuove sezioni media */
-    --spacing-text-small: 0px;  /* Spaziatura per nuove sezioni piccola */
+    --spacing-text-small: 2px;  /* Spaziatura per nuove sezioni piccola */
   }
 
 /* Default: Desktop */
@@ -90,7 +90,7 @@ p {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 
@@ -833,7 +833,7 @@ button {
   .color-card{
     align-self: stretch;
     flex: 1 0 0;
-    height: calc(width / 3 - 10px);
+    aspect-ratio : 1 / 1;
     padding: 7px 7px 4px 7px;
     min-width: 60px;
     max-width: 120px;
