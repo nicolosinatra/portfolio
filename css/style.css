@@ -623,7 +623,6 @@ button {
 
 .font-name p {
     line-height: 22px;
-    max-width: 200px;
     text-wrap: auto;
 }
 
@@ -769,12 +768,17 @@ button {
   .typography-section {
     width: 100%;
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .font-info{
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+  }
+
+  .font-name p{
+    max-width: 200px;
   }
 
   .font-sample{
