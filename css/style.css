@@ -474,6 +474,14 @@ button {
   text-underline-position: from-font;
 }
 
+.logo-progetto {
+  width: 60vw;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
 .new-section {
   border-top: 1px solid #1a1a1a;
   padding-top: 8px;
@@ -824,6 +832,10 @@ button {
     padding: 0 var(--margin-oriz-small);
   }
 
+  .logo-progetto{
+    width: 70vw;
+  }
+
   .segue-img{
     margin-bottom: var(--spacing-element-visivi-small);
   }
@@ -1075,14 +1087,6 @@ button {
 .contenuto-visivo .schema {
   padding-left: 100px;
   box-sizing: border-box;
-}
-
-.logo-progetto {
-  width: 50vw;
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
 }
 
 .animazione-logo {
@@ -1341,6 +1345,30 @@ button {
 
 .stickers-container{
   width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------------- FOMM QUELL ------------------------------------------------------------------------------ */
+
+.loghi-e-ref-PO{
+  align-items: center;
+  gap: var(--spacing-element-visivi-large);
+}
+
+/* -------------------------------------- TABLET: max-width 1024px */
+@media (max-width: 1024px) {
+  .loghi-e-ref-PO{
+    gap: var(--spacing-element-visivi-medium);
+  }
+
+}
+
+/* -------------------------------------- MOBILE: max-width 600px */
+@media (max-width: 600px) {
+  .loghi-e-ref-PO{
+    gap: var(--spacing-element-visivi-small);
+  }
+
 }
 
 
