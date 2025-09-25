@@ -513,13 +513,7 @@ button {
   align-items: stretch;
 }
 
-.contenuto-visivo img {
-  width: 100%;
-  height: auto;
-  object-fit:contain;
-}
-
-.contenuto-visivo-full img {
+.contenuto-visivo img, .contenuto-visivo-full img, .contenuto-visivo svg, .contenuto-visivo-full svg{
   width: 100%;
   height: auto;
   object-fit:contain;
@@ -1353,6 +1347,11 @@ button {
 .loghi-e-ref-PO{
   align-items: center;
   gap: var(--spacing-element-visivi-large);
+  flex-direction: row;
+}
+
+.loghi-e-ref-PO .contenuto-visivo{
+  width: 65%;
 }
 
 /* -------------------------------------- TABLET: max-width 1024px */
