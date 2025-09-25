@@ -34,3 +34,38 @@ $(document).ready(function () {
   });
 });
 
+
+$(document).ready(function () {
+    $(".slider-container").each(function () {
+      const $container = $(this);
+      const $slider = $container.find(".slider");
+      const $slides = $container.find(".slides");
+      const $images = $container.find(".slides img");
+      const $prevBtn = $container.find(".prev");
+      const $nextBtn = $container.find(".next");
+
+      let index = 0;
+
+      function updateSlider() {
+        const slideWidth = $slider.width();
+        $slides.css("transform", `translateX(-${index * slideWidth}px)`);
+      }
+
+      function nextSlide() {
+        index = (index + 1) % $images.length;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        index = (index - 1 + $images.length) % $images.length;
+        updateSlider();
+      }
+
+      $nextBtn.on("click", nextSlide);
+      $prevBtn.on("click", prevSlide);
+
+      // Aggiorna posizione quando si ridimensiona
+      $(window).on("resize", updateSlider);
+    });
+  
+  });
