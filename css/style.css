@@ -1429,8 +1429,8 @@ button {
   flex-shrink: 0;
 }
 
-/* Mobile layout */
-@media (max-width: 600px) {
+/* -------------------------------------- TABLET: max-width 1024px */
+@media (max-width: 1024px) {
   .slider-container {
     flex-direction: column;
   }
