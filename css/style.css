@@ -340,7 +340,7 @@ button {
   padding: 10px var(--margin-oriz-large);
   box-sizing: border-box;
   border-bottom: 1px solid #1a1a1a;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
 }
@@ -892,7 +892,7 @@ button {
 .desktop-home {
   position: relative;
   min-height: 100vh;
-  padding: 80px 20px 0px;
+  padding: 80px 0 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -925,13 +925,13 @@ button {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   padding-bottom: 40px;
 }
 
 .project {
   width: 100%;
-  max-width: 1600px;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -996,6 +996,38 @@ button {
   padding-left: 5px; /* spazio tra le ripetizioni */
 }
 
+.fixed {
+  position: fixed;
+  left: 0; 
+  right:0;
+  padding-left: var(--margin-oriz-large);
+  padding-right: var(--margin-oriz-large);
+  z-index: 5;
+  background-color: #fafafa;
+  cursor: pointer;
+  border-bottom: #1a1a1a solid 1px;
+}
+
+.anni-progetti-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.anni-progetti-menu {
+  border-top: #1a1a1a solid 1px;
+  padding: 15px var(--margin-oriz-large) 0;
+}
+
+.project-list .anni-progetti-container:first-child .anni-progetti-menu {
+    border-top: none;
+    position: fixed;
+    left: 0; 
+    right:0;
+    top: 55px;
+    padding-left: var(--margin-oriz-large);
+    padding-right: var(--margin-oriz-large);
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -1008,7 +1040,7 @@ button {
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
   .desktop-home {
-    padding: 70px var(--margin-oriz-medium) 0px;
+    padding: 70px 0 0;
   }
 
   /* .filters {
@@ -1026,6 +1058,7 @@ button {
 
   .project {
     max-width: 100vw;
+    padding: 0 var(--margin-oriz-medium);
   }
 
   .project a {
@@ -1037,13 +1070,28 @@ button {
     line-height: 28px;
     padding: 4px;
   }
+
+  .fixed {
+    padding-left: var(--margin-oriz-medium);
+    padding-right: var(--margin-oriz-medium);
+  }
+
+  .anni-progetti-menu {
+    padding: 10px var(--margin-oriz-medium) 0;
+  }
+
+  .project-list .anni-progetti-container:first-child .anni-progetti-menu {
+    top: 53px;
+    padding-left: var(--margin-oriz-medium);
+    padding-right: var(--margin-oriz-medium);
+  }
 }
 
 
 /* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
   .desktop-home {
-    padding: 60px var(--margin-oriz-small) 0px;
+    padding: 60px 0 0;
   }
 
   /* .filters {
@@ -1058,6 +1106,7 @@ button {
 
   .project {
     max-width: 100vw;
+    padding: 0 var(--margin-oriz-small);
   }
 
   .project a {
@@ -1073,6 +1122,21 @@ button {
     font-size: 18px;
     line-height: 20px;
     padding: 4px;
+  }
+
+  .fixed {
+    padding-left: var(--margin-oriz-small);
+    padding-right: var(--margin-oriz-small);
+  }
+
+  .anni-progetti-menu {
+    padding: 10px var(--margin-oriz-small) 0;
+  } 
+
+  .project-list .anni-progetti-container:first-child .anni-progetti-menu {
+    top: 47px;
+    padding-left: var(--margin-oriz-small);
+    padding-right: var(--margin-oriz-small);
   }
 }
 
