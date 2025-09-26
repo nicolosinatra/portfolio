@@ -106,7 +106,7 @@ $(document).ready(function () {
       console.log("scorllY: " + scrollY + " item.top: " + item.top);
 
 
-      if ((scrollY > 100)&&(scrollY >= item.top - topCumulative)) {
+      if ((scrollY > 100)&&(scrollY >= item.top - topCumulative - fixedCount * headerHeight)) {
         $el.addClass("fixed").css({ top: topCumulative + "px" });
         fixedCount++;
       } else {
