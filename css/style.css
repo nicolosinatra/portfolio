@@ -1202,8 +1202,9 @@ h3.about{
   }
 
   .section-row.about {
-    height: var(--app-height);
-    padding-bottom: 100px;
+    height: calc(var(--app-height) - 190px);
+    box-sizing: border-box;
+    padding-bottom: 30px;
   }
 
   .info-container{
