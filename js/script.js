@@ -144,25 +144,24 @@ $(document).ready(function () {
 });
 
 
+const page = document.body.dataset.page;
+
 function blockScroll(e) {
-      e.preventDefault();
-    }
+  e.preventDefault();
+}
 
-    function enableNoScrollIfMobile() {
-      if (window.innerWidth < 600) {
-        // blocca scroll su mobile
-        document.addEventListener("touchmove", blockScroll, { passive: false });
-      } else {
-        // rimuove il blocco se schermo > 600px
-        document.removeEventListener("touchmove", blockScroll, { passive: false });
-      }
-    }
+function enableNoScrollIfMobile() {
+  if (page === "about" && window.innerWidth < 600) {
+    document.addEventListener("touchmove", blockScroll, { passive: false });
+  } else {
+    document.removeEventListener("touchmove", blockScroll, { passive: false });
+  }
+}
 
-// controlla al caricamento
 enableNoScrollIfMobile();
-
-// ricontrolla se ridimensioni lo schermo
 window.addEventListener("resize", enableNoScrollIfMobile);
+
+
 
     
 function setAppHeight() {
