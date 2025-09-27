@@ -142,3 +142,32 @@ $(document).ready(function () {
   });
 
 });
+
+
+function blockScroll(e) {
+      e.preventDefault();
+    }
+
+    function enableNoScrollIfMobile() {
+      if (window.innerWidth < 600) {
+        // blocca scroll su mobile
+        document.addEventListener("touchmove", blockScroll, { passive: false });
+      } else {
+        // rimuove il blocco se schermo > 600px
+        document.removeEventListener("touchmove", blockScroll, { passive: false });
+      }
+    }
+
+// controlla al caricamento
+enableNoScrollIfMobile();
+
+// ricontrolla se ridimensioni lo schermo
+window.addEventListener("resize", enableNoScrollIfMobile);
+
+    
+function setAppHeight() {
+  document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+}
+
+window.addEventListener('resize', setAppHeight);
+setAppHeight();

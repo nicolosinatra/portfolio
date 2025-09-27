@@ -397,7 +397,7 @@ button {
 
 .main {
   position: relative;
-  min-height: 100vh;
+  min-height: var(--app-height);
   width: 100vw;
   box-sizing: border-box;
   padding: var(--margin-vert-large) var(--margin-oriz-large) 0;
@@ -888,7 +888,7 @@ button {
 
 .desktop-home {
   position: relative;
-  min-height: 100vh;
+  min-height: var(--app-height);
   padding: 80px 0 0;
   box-sizing: border-box;
   display: flex;
@@ -1167,7 +1167,7 @@ h3.about{
 }
 
 .section-row.about {
-  height: 55vh;
+  height: calc(var(--app-height) / 2);
 }
 
 .info-container{
@@ -1197,7 +1197,7 @@ h3.about{
   }
 
   .section-row.about {
-    height: calc(100vh);
+    height: var(--app-height);
     padding-bottom: 100px;
   }
 
@@ -1218,13 +1218,9 @@ h3.about{
 
 /* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
-  .main.about {
-    overflow: clip;
-  }
-
   .section-row.about {
-      height: calc(100vh - 135px);
-      padding-bottom: 70px;
+      height: calc(var(--app-height) - 135px);
+      padding-bottom: 30px;
       box-sizing: border-box;
     }
 
