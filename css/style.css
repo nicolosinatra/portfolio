@@ -1217,11 +1217,19 @@ h3.about{
 
 /* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
+  .main.about {
+    overflow: clip;
+  }
+
   .section-row.about {
       height: calc(100vh - 135px);
       padding-bottom: 70px;
       box-sizing: border-box;
     }
+
+  h3.about{
+    font-size: 18px;
+  }
 }
 
 /* ------------------------------------------------------------------------------ ARC ------------------------------------------------------------------------------ */
