@@ -1148,11 +1148,14 @@ body.about {
 .header-fixed.about {
   background-color: #000;
   border-bottom: 1px solid #fafafa;
-
 }
 
 .plus-icon.about path{
   stroke: #fafafa;
+}
+
+.voce-menu.about {
+  border-top: 1px solid #fafafa;
 }
 
 h1.about{
@@ -1194,7 +1197,9 @@ h3.about{
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
   .section-row.about {
-    height: 75vh;
+    height: calc(100vh - 135px);
+    padding-bottom: 70px;
+    box-sizing: border-box;
   }
 
   .info-container{
