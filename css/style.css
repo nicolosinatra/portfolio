@@ -1146,11 +1146,11 @@ button {
 
 
 body.about {
-  background-color: #402413;
+  background-color: #26150b;
 }
 
 .header-fixed.about {
-  background-color: #402413;
+  background-color: #26150b;
   border-bottom: 1px solid #00f9ff;
 }
 
@@ -1192,7 +1192,7 @@ h3.about{
 }
 
 .contact-info.about {
-  background-color: #402413;
+  background-color: #26150B;
 }
 
 /* -------------------------------------- TABLET: max-width 1024px */
