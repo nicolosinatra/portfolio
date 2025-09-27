@@ -1154,10 +1154,6 @@ body.about {
   stroke: #fafafa;
 }
 
-.voce-menu.about {
-  border-top: 1px solid #fafafa;
-}
-
 h1.about{
   color: #fafafa;
 }
@@ -1196,10 +1192,13 @@ h3.about{
 
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
+  .voce-menu.about {
+    border-top: 1px solid #fafafa;
+  }
+
   .section-row.about {
-    height: calc(100vh - 135px);
-    padding-bottom: 70px;
-    box-sizing: border-box;
+    height: calc(100vh);
+    padding-bottom: 100px;
   }
 
   .info-container{
@@ -1214,6 +1213,15 @@ h3.about{
     height: auto;
   }
 
+}
+
+/* -------------------------------------- MOBILE: max-width 600px */
+@media (max-width: 600px) {
+  .section-row.about {
+      height: calc(100vh - 135px);
+      padding-bottom: 70px;
+      box-sizing: border-box;
+    }
 }
 
 /* ------------------------------------------------------------------------------ ARC ------------------------------------------------------------------------------ */
