@@ -1203,6 +1203,7 @@ h3.about{
 
   .info-container{
     order: 2;
+    max-width: 100%;
   }
 
   h3.about{
@@ -1228,7 +1229,7 @@ h3.about{
     }
 
   h3.about{
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
