@@ -312,7 +312,7 @@ p {
 
 HTML, body {
   background: #fafafa;
-  color:#26150B ;
+  color:#402413 ;
 }
 
 body {
@@ -343,7 +343,7 @@ button {
   right: 0px;
   padding: 10px var(--margin-oriz-large);
   box-sizing: border-box;
-  border-bottom: 1px solid #26150B;
+  border-bottom: 1px solid #402413;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -358,7 +358,7 @@ button {
 
 .header h2, .header-fixed h2 {
   font-size: 28px;
-  color: #26150B;
+  color: #402413;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -455,7 +455,7 @@ button {
 .project-info-row {
   display: flex;
   align-items: left;
-  border-bottom: 1px solid #26150B;
+  border-bottom: 1px solid #402413;
   padding: 5px 0;
 }
 
@@ -486,7 +486,7 @@ button {
 }
 
 .new-section {
-  border-top: 1px solid #26150B;
+  border-top: 1px solid #402413;
   padding-top: 8px;
   margin:0;
   text-transform: uppercase;
@@ -547,7 +547,7 @@ button {
 
 .color-card {
     background-color: #fafafa;
-    border: 1px solid #26150B;
+    border: 1px solid #402413;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -562,7 +562,7 @@ button {
 .color-sample {
     flex: 1;
     width: 100%;
-    border: 1px solid #26150B;
+    border: 1px solid #402413;
     min-height: 1px;
     min-width: 1px;
 }
@@ -673,7 +673,7 @@ button {
 
 .backtotop p {
   font-size: 32px;
-  color: #26150B;
+  color: #402413;
   text-decoration: none;
   cursor: pointer;
 }
@@ -711,7 +711,7 @@ button {
 
   .voce-menu{
     display: block;
-    border-top: 1px solid #26150B;
+    border-top: 1px solid #402413;
     padding: 10px var(--margin-oriz-medium);
     text-align: left;
     transform: translateY(-20px);
@@ -914,7 +914,7 @@ button {
   margin: 0;
   cursor: pointer;
   font-size: 32px;
-  color: #26150B;
+  color: #402413;
   text-align: left;
   font-style: normal;
   font-weight: 400;
@@ -942,7 +942,7 @@ button {
 .project a {
   --project-line-height: 0.833;
   font-size: 18vw;
-  color: #26150B;
+  color: #402413;
   text-transform: uppercase;
   text-align: right;
   font-style: normal;
@@ -969,7 +969,7 @@ button {
   left: 0;
   bottom: 0;
   width: 100vw;
-  background: #26150B;
+  background: #402413;
   color: #fafafa;
   font-size: 20px;
   font-weight: 500;
@@ -1006,7 +1006,7 @@ button {
   z-index: 5;
   background-color: #fafafa;
   cursor: pointer;
-  border-bottom: #26150B solid 1px;
+  border-bottom: #402413 solid 1px;
 }
 
 .anni-progetti-container {
@@ -1015,7 +1015,7 @@ button {
 }
 
 .anni-progetti-menu {
-  border-top: #26150B solid 1px;
+  border-top: #402413 solid 1px;
   padding: 15px var(--margin-oriz-large) 0;
 }
 
@@ -1146,11 +1146,11 @@ button {
 
 
 body.about {
-  background-color: #26150b;
+  background-color: #402413;
 }
 
 .header-fixed.about {
-  background-color: #26150b;
+  background-color: #402413;
   border-bottom: 1px solid #00f9ff;
 }
 
@@ -1192,7 +1192,7 @@ h3.about{
 }
 
 .contact-info.about {
-  background-color: #26150B;
+  background-color: #402413;
 }
 
 /* -------------------------------------- TABLET: max-width 1024px */
@@ -1409,7 +1409,7 @@ h3.about{
 
 .qr-section{
   width: 100%;
-  border-top: 1px solid #26150B;
+  border-top: 1px solid #402413;
   padding-top: 10px;
 }
 
