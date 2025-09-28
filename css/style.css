@@ -890,6 +890,14 @@ button {
 
 /* ------------------------------------------------------------------------------ HOME ------------------------------------------------------------------------------ */
 
+
+canvas {
+  display: block;
+}
+
+
+/* ------------------------------------------------------------------------------ PROJECT INDEX ------------------------------------------------------------------------------ */
+
 .desktop-home {
   position: relative;
   min-height: var(--app-height);
@@ -962,6 +970,9 @@ button {
   text-underline-offset: -45%; /* -108px */
   text-underline-position: from-font;
   text-transform: uppercase;
+  text-decoration-color: #00f9ff;
+  text-decoration-skip-ink: none;
+
 }
 
 .contact-info {
@@ -969,8 +980,8 @@ button {
   left: 0;
   bottom: 0;
   width: 100vw;
-  background: #402413;
-  color: #fafafa;
+  background: #26150B;
+  color: #00f9ff;
   font-size: 20px;
   font-weight: 500;
   line-height: 35px;
