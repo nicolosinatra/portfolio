@@ -19,7 +19,7 @@ function setup() {
   }
   
   angleMode(DEGREES);
-  background(50);
+  background("#00f9ff");
 }
 
 function draw() {
@@ -37,22 +37,24 @@ function draw() {
     let lineEndY = pmouseY - height / 2;
 
     // And, if the mouse is pressed while in the canvas...
-    // if (mouseIsPressed === true) {
-      // For every reflective section the canvas is split into, draw the cursor's
-      // coordinates while pressed...
-      for (let i = 0; i < symmetry; i++) {
-        rotate(angle);
-        stroke(255);
-        strokeWeight(3);
-        line(lineStartX, lineStartY, lineEndX, lineEndY);
+    if (mouseIsPressed === true) {
+      setup();
+    }
 
-        // ... and reflect the line within the symmetry sections as well.
-        push();
-        scale(1, -1);
-        line(lineStartX, lineStartY, lineEndX, lineEndY);
-        pop();
-      }
-    // }
+    // For every reflective section the canvas is split into, draw the cursor's
+    // coordinates while pressed...
+    for (let i = 0; i < symmetry; i++) {
+      rotate(angle);
+      stroke("#26150B");
+      strokeWeight(3);
+      line(lineStartX, lineStartY, lineEndX, lineEndY);
+
+      // ... and reflect the line within the symmetry sections as well.
+      push();
+      scale(1, -1);
+      line(lineStartX, lineStartY, lineEndX, lineEndY);
+      pop();
+    }
   }
 }
 
