@@ -153,7 +153,10 @@ function blockScroll(e) {
 function enableNoScrollIfMobile() {
   if (page === "about" && window.innerWidth < 600) {
     document.addEventListener("touchmove", blockScroll, { passive: false });
-  } else {
+  } else if (page === "home" && window.innerWidth < 600) {
+    document.addEventListener("touchmove", blockScroll, { passive: false });
+  }
+  else {
     document.removeEventListener("touchmove", blockScroll, { passive: false });
   }
 }

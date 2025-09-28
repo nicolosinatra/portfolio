@@ -10,7 +10,14 @@ function setup() {
   describe(
     `Dark grey canvas that reflects the lines drawn within it in ${symmetry} sections.`
   );
-  createCanvas(windowWidth, 500);
+  if (windowWidth<600){
+    createCanvas(windowWidth, (windowHeight - 48 - 29.59));
+  } else if (windowWidth<1024) {
+    createCanvas(windowWidth, (windowHeight - 53.5 - 36));
+  } else {
+    createCanvas(windowWidth, (windowHeight - 56 - 43)); // togli dimensione header e footer
+  }
+  
   angleMode(DEGREES);
   background(50);
 }
