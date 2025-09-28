@@ -1,60 +1,60 @@
-// Define the global variables.
-// The symmetry variable will define how many reflective sections the canvas
-// is split into.
+// Numero di settori simmetrici
 let symmetry = 6;
-
-// The angle button will calculate the angle at which each section is rotated.
 let angle = 360 / symmetry;
 
+// variabili per smoothing
+let smoothX, smoothY;
+
 function setup() {
-  describe(
-    `Dark grey canvas that reflects the lines drawn within it in ${symmetry} sections.`
-  );
-  if (windowWidth<600){
-    createCanvas(windowWidth, (windowHeight - 48 - 29.59));
-  } else if (windowWidth<1024) {
-    createCanvas(windowWidth, (windowHeight - 53.5 - 36));
+  if (windowWidth < 600) {
+    createCanvas(windowWidth, windowHeight - 48 - 30);
+  } else if (windowWidth < 1024) {
+    createCanvas(windowWidth, windowHeight - 53.5 - 36);
   } else {
-    createCanvas(windowWidth, (windowHeight - 56 - 43)); // togli dimensione header e footer
+    createCanvas(windowWidth, windowHeight - 56 - 43); // togli dimensione header e footer
   }
-  
+
   angleMode(DEGREES);
   background("#00f9ff");
+
+  // inizializzo smoothing con il mouse
+  smoothX = mouseX;
+  smoothY = mouseY;
 }
 
 function draw() {
-  // Move the 0,0 coordinates of the canvas to the center, instead of in
-  // the top left corner.
   translate(width / 2, height / 2);
 
-  // If the cursor is within the limits of the canvas...
   if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-    // Translate the current position and the previous position of the
-    // cursor to the new coordinates set with the translate() function above.
-    let lineStartX = mouseX - width / 2;
-    let lineStartY = mouseY - height / 2;
-    let lineEndX = pmouseX - width / 2;
-    let lineEndY = pmouseY - height / 2;
+    // ammorbidisco le coordinate con lerp
+    smoothX = lerp(smoothX, mouseX, 0.4);
+    smoothY = lerp(smoothY, mouseY, 0.4);
 
-    // And, if the mouse is pressed while in the canvas...
-    if(windowWidth>600){
-        if (mouseIsPressed === true) {
-        setup();
-      }
+    // coordinate relative al centro
+    let dotX = round(smoothX - width / 2);
+    let dotY = round(smoothY - height / 2);
+
+    // reset sfondo con click
+    if (windowWidth > 600 && mouseIsPressed) {
+      background("#00f9ff");
     }
 
-    // For every reflective section the canvas is split into, draw the cursor's
-    // coordinates while pressed...
+    // disegno i punti in tutti i settori
     for (let i = 0; i < symmetry; i++) {
-      rotate(angle);
-      stroke("#26150B");
-      strokeWeight(3);
-      line(lineStartX, lineStartY, lineEndX, lineEndY);
+      push();
 
-      // ... and reflect the line within the symmetry sections as well.
+      rotate(i * angle);
+
+      noStroke();
+      fill("#26150B");
+      ellipse(dotX, dotY, 3, 3); // pallino principale
+
+      // riflesso
       push();
       scale(1, -1);
-      line(lineStartX, lineStartY, lineEndX, lineEndY);
+      ellipse(dotX, dotY, 3, 3);
+      pop();
+
       pop();
     }
   }
