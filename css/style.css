@@ -1202,10 +1202,13 @@ h2.about{
 
 h3.about{
   color: #00f9ff;
+  font-size: 21px;
 }
 
 .section-row.about {
-  height: calc(var(--app-height) / 2);
+  height: calc(var(--app-height) - 120px);
+  box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 .info-container{
@@ -1216,10 +1219,11 @@ h3.about{
 .about-hero-img {
   width: auto;
   height: 100%;
+  text-align: end;
 }
 
 .about-hero-img img {
-  max-width: 100%;
+  max-width: 80%;
   max-height: 100%;
   aspect-ratio: 9/6;
   mix-blend-mode: exclusion;
@@ -1236,7 +1240,7 @@ h3.about{
   }
 
   .section-row.about {
-    height: calc(var(--app-height) - 190px);
+    height: calc(var(--app-height) - 90px);
     box-sizing: border-box;
     padding-bottom: 30px;
   }
@@ -1253,6 +1257,9 @@ h3.about{
   .about-hero-img {
     height: auto;
   }
+  .about-hero-img img {
+  max-width: 100%;
+}
 
 }
 
