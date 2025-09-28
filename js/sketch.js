@@ -37,8 +37,10 @@ function draw() {
     let lineEndY = pmouseY - height / 2;
 
     // And, if the mouse is pressed while in the canvas...
-    if (mouseIsPressed === true) {
-      setup();
+    if(windowWidth>600){
+        if (mouseIsPressed === true) {
+        setup();
+      }
     }
 
     // For every reflective section the canvas is split into, draw the cursor's
