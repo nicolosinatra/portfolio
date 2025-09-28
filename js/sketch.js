@@ -10,7 +10,7 @@ function setup() {
   describe(
     `Dark grey canvas that reflects the lines drawn within it in ${symmetry} sections.`
   );
-  createCanvas(720, 400);
+  createCanvas(windowWidth, 500);
   angleMode(DEGREES);
   background(50);
 }
@@ -47,4 +47,8 @@ function draw() {
       }
     // }
   }
+}
+
+function windowResized() {
+  setup();
 }
