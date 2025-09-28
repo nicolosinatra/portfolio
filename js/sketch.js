@@ -7,11 +7,11 @@ let smoothX, smoothY;
 
 function setup() {
   if (windowWidth < 600) {
-    createCanvas(windowWidth, windowHeight - 48 - 30);
+    createCanvas(windowWidth, windowHeight - 47 - 28);
   } else if (windowWidth < 1024) {
-    createCanvas(windowWidth, windowHeight - 53.5 - 36);
+    createCanvas(windowWidth, windowHeight - 52.5 - 35);
   } else {
-    createCanvas(windowWidth, windowHeight - 56 - 43); // togli dimensione header e footer
+    createCanvas(windowWidth, windowHeight - 55 - 42); // togli dimensione header e footer
   }
 
   angleMode(DEGREES);

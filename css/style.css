@@ -901,7 +901,7 @@ canvas {
   display: block;
   width: 100vw;
   height: var(--app-height);
-  z-index: 10;
+  z-index: 1;
 }
 
 /* -------------------------------------- TABLET: max-width 1024px */
@@ -1011,6 +1011,7 @@ canvas {
   box-sizing: border-box;
   overflow: hidden;
   white-space: nowrap;
+  z-index: 5;
 }
 
 .contact-info p {
