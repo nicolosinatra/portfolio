@@ -439,7 +439,9 @@ img{
   height: auto;
   object-fit: cover;
   filter: grayscale(100%);
-  mix-blend-mode: screen;
+  mix-blend-mode: plus-lighter;
+  isolation:isolate;
+  will-change: filter, transform;
 }
 
 .project-hero-img:hover {
