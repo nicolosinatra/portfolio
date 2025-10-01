@@ -1241,6 +1241,7 @@ h3.about{
 }
 
 .about-hero-img img {
+  display: inline;
   max-width: 80%;
   max-height: 100%;
   aspect-ratio: 9/6;
