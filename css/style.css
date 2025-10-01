@@ -332,6 +332,13 @@ button {
   font-family: 'Neue Regrade', Arial, sans-serif;
 }
 
+img{
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 .header-fixed {
   background: #fafafa;
   position: fixed;
@@ -424,6 +431,7 @@ button {
 
 .project-hero-img{
   width: 65%;
+  background: #26150B;
 }
 
 .project-hero-img img {
@@ -431,10 +439,16 @@ button {
   height: auto;
   object-fit: cover;
   filter: grayscale(100%);
+  mix-blend-mode: screen;
+}
+
+.project-hero-img:hover {
+  background: none;
 }
 
 .project-hero-img img:hover {
   filter: none;
+  mix-blend-mode: normal;
 }
 
 .project-hero-info-container {
