@@ -40,7 +40,7 @@ function draw() {
 
     noStroke();
     fill(2, 21, 11);
-    ellipse(0, 0, 10 + 10 * sin(frameCount * 2));
+    ellipse(0, 0, 8 + 8 * sin(frameCount * 2));
 
     // controlla se il mouse si muove
     if (mouseX !== mouseXPrev || mouseY !== mouseYPrev) {
