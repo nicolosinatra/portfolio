@@ -1080,6 +1080,10 @@ canvas {
     padding-right: var(--margin-oriz-large);
 }
 
+.last-project {
+  padding-bottom: 50px;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -1137,6 +1141,10 @@ canvas {
     padding-left: var(--margin-oriz-medium);
     padding-right: var(--margin-oriz-medium);
   }
+
+  .last-project {
+    padding-bottom: 20px;
+  }
 }
 
 
@@ -1145,6 +1153,24 @@ canvas {
   .desktop-index {
     padding: 60px 0 0;
     overflow: scroll;
+  }
+
+  /* iOS: usa scroll interno per evitare che Safari nasconda la UI durante lo scroll */
+  .use-inner-scroll {
+    height: var(--app-height);
+    overflow: hidden; /* blocca lo scroll della pagina principale */
+  }
+
+  .use-inner-scroll .main-index-progetti {
+    height: var(--app-height);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* momentum scrolling su iOS */
+    overscroll-behavior: contain;
+  }
+
+  /* assicurati che elementi interni scrollabili abbiano overflow impostato */
+  .main-index-progetti .scrollable, .main-index-progetti .contenuto-visivo-full, .main-index-progetti .contenuto-visivo {
+    -webkit-overflow-scrolling: touch;
   }
 
 
