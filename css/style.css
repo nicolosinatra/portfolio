@@ -1334,7 +1334,7 @@ h3.about{
   box-sizing: border-box;
 }
 
-.animazione-logo {
+.video-setting {
     width: 100%;     
     height: auto;
     overflow: hidden;
@@ -1715,7 +1715,37 @@ h3.about{
 
 
 
+/* ---------------------------------------------------------------------------- CAMELOT ------------------------------------------------------------------------------ */
 
+
+.img-affiancate-camelot{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* allinea le immagini alla stessa altezza */
+}
+
+.img-affiancate-camelot .contenuto-visivo-full{
+  width: 100%;
+  flex: 1;
+  height: auto;
+  object-fit: cover; /* mantiene proporzioni e riempie il box */
+}
+
+.img-affiancate-camelot video{
+  width: 100%;
+  height: auto;
+  flex: 1.2;
+  object-fit: cover; /* mantiene proporzioni e riempie il box */
+}
+
+
+/* -------------------------------------- TABLET: max-width 1024px */
+@media (max-width: 1024px) {
+  .img-affiancate-camelot{
+    flex-direction: column;
+  }
+
+}
 
 
 
