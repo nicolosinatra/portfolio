@@ -22,7 +22,7 @@ function setup() {
   }
 
   angleMode(DEGREES);
-  background("#00f9ff");
+  background("#fafafa");
 
   // inizializzo smoothing con il mouse
   smoothX = mouseX;
@@ -33,7 +33,7 @@ function draw() {
   translate(width / 2, height / 2);
 
   if (showBlink && !mouseMovedOnce) {
-    background("#00f9ff");
+    background("#fafafa");
 
     // effetto pulsazione: opacity va avanti e indietro
     // opacity = 128 + 127 * sin(frameCount * 2);
@@ -60,7 +60,7 @@ function draw() {
 
       // reset sfondo con click
       if (windowWidth > 600 && mouseIsPressed) {
-        background("#00f9ff");
+        background("#fafafa");
       }
 
       // disegno i punti in tutti i settori
