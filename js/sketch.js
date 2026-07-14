@@ -1,5 +1,5 @@
 // Numero di settori simmetrici
-let symmetry = 6;
+let symmetry = 8;
 let angle = 360 / symmetry;
 
 // variabili per smoothing
