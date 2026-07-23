@@ -414,7 +414,7 @@ img{
 .project-title {
   text-transform: uppercase;
   line-height: 0.9;
-  letter-spacing: 0;
+  letter-spacing: -2%;
   margin: 0;
   padding: 0;
 }
