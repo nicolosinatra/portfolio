@@ -1327,10 +1327,15 @@ h3.about{
 
 /* ------------------------------------------------------------------------------ RADICI ------------------------------------------------------------------------------ */
 
+
+.right-section-radici-website{
+  width: 18%;
+}
+
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
 
-.right-section-sottosale-website{
+.right-section-radici-website{
   width: 18%;
 }
 
@@ -1340,7 +1345,7 @@ h3.about{
 /* -------------------------------------- MOBILE: max-width 600px */
 @media (max-width: 600px) {
 
-.right-section-sottosale-website{
+.right-section-radici-website{
   width: 100%;
 }
 
