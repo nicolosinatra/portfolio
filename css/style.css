@@ -1336,8 +1336,26 @@ h3.about{
 @media (max-width: 1024px) {
 
 .right-section-radici-website{
-  width: 18%;
+  padding-top: var(--spacing-element-visivi-medium);
+  width: 100%;
 }
+
+.right-section-radici-website .coppia-mockup, .right-section-radici-website .coppia-mockup-2{
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.right-section-radici-website .mockup-mobile-img{
+  width: 45%;
+  height: auto;
+}
+
+.right-section-radici-website .mobile-mockups-container{
+    flex-direction: row;
+}
+
 
 }
 
@@ -1348,6 +1366,10 @@ h3.about{
 .right-section-radici-website{
   width: 100%;
 }
+
+.right-section-radici-website .coppia-mockup, .right-section-radici-website .coppia-mockup-2{
+    width: 100%;
+  }
 
 }
 
