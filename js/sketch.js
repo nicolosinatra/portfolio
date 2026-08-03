@@ -14,15 +14,15 @@ let mouseMovedOnce = false;
 
 function setup() {
   if (windowWidth < 600) {
-    createCanvas(windowWidth, windowHeight - 47 - 28);
+    createCanvas(windowWidth, windowHeight - 47); //28 dimensione footer che adesso è nascosto
   } else if (windowWidth < 1024) {
-    createCanvas(windowWidth, windowHeight - 52.5 - 35);
+    createCanvas(windowWidth, windowHeight - 52.5); // 35 dimensione footer che adesso è nascosto
   } else {
-    createCanvas(windowWidth, windowHeight - 55 - 42); // togli dimensione header e footer
+    createCanvas(windowWidth, windowHeight - 55); // togli dimensione header e footer -- 42 dimensione footer che adesso è nascosto
   }
 
   angleMode(DEGREES);
-  background("#fafafa");
+  // background("#fafafa");
 
   // inizializzo smoothing con il mouse
   smoothX = mouseX;
@@ -30,9 +30,9 @@ function setup() {
 }
 
 function draw() {
-  translate(width / 2, height / 2);
+  translate(width / 2, height / 2); // sposto l'origine al centro del canvas
 
-  if (showBlink && !mouseMovedOnce) {
+  /* if (showBlink && !mouseMovedOnce) {
     background("#fafafa");
 
     // effetto pulsazione: opacity va avanti e indietro
@@ -48,7 +48,7 @@ function draw() {
       fadingOut = true;
     }
     return; // non disegnare altro
-  }else {
+  }else { */
     if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
       // ammorbidisco le coordinate con lerp
       smoothX = lerp(smoothX, mouseX, 0.4);
@@ -59,31 +59,32 @@ function draw() {
       let dotY = round(smoothY - height / 2);
 
       // reset sfondo con click
-      if (windowWidth > 600 && mouseIsPressed) {
-        background("#fafafa");
-      }
+      if (!mouseIsPressed) {
+        
+        // disegno i punti in tutti i settori
+        for (let i = 0; i < symmetry; i++) {
+          push();
 
-      // disegno i punti in tutti i settori
-      for (let i = 0; i < symmetry; i++) {
-        push();
+          rotate(i * angle);
 
-        rotate(i * angle);
+          noStroke();
+          // fill("#26150B");
+          // fill("#00f9ff");
+          fill("#00f9ff");
+          ellipse(dotX, dotY, 4, 4); // pallino principale
 
-        noStroke();
-        fill("#26150B");
-        ellipse(dotX, dotY, 3, 3); // pallino principale
+          // riflesso
+          push();
+          scale(1, -1);
+          ellipse(dotX, dotY, 4, 4);
+          pop();
 
-        // riflesso
-        push();
-        scale(1, -1);
-        ellipse(dotX, dotY, 3, 3);
-        pop();
-
-        pop();
+          pop();
+        }
       }
     }
   }
-}
+// }
 
 function windowResized() {
   setup();
