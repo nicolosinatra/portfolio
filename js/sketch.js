@@ -69,12 +69,12 @@ function draw() {
           // fill("#26150B");
           // fill("#00f9ff");
           fill("#00f9ff");
-          ellipse(dotX, dotY, 4, 4); // pallino principale
+          ellipse(dotX, dotY, 2, 2); // pallino principale
 
           // riflesso
           push();
           scale(1, -1);
-          ellipse(dotX, dotY, 4, 4);
+          ellipse(dotX, dotY, 2, 2);
           pop();
 
           pop();
