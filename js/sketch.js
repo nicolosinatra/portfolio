@@ -2203,7 +2203,7 @@ let disegnoiniziale= [
 ];
 
 function drawPatternFromPoints() {
-  const size = windowWidth < 900 ? 2 : 4;
+  const size = windowWidth < 900 ? 2 : 3;
   noStroke();
   fill("#00f9ff");
 
