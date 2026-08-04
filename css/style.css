@@ -988,8 +988,6 @@ canvas {
 
 .project-list {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   padding-bottom: 40px;
 }
 
@@ -1014,21 +1012,26 @@ canvas {
   line-height: calc(var(--project-line-height) * 1em);
   letter-spacing: 0;
   width: 100%;
-  display: block;
+  display: inline-block;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone; /* necessario per Safari */
 }
 
-.project a:hover {
-  line-height: calc(var(--project-line-height) * 1em);
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: 2%; /* 6px */
-  text-underline-offset: -45%; /* -108px */
-  text-underline-position: from-font;
-  text-transform: uppercase;
-  text-decoration-color: #00f9ff;
-  text-decoration-skip-ink: none;
+.project a .project-link-label {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone; /* necessario per Safari */
+}
 
+.project a:hover .project-link-label {
+  line-height: calc(var(--project-line-height) * 1em);
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: radial-gradient(circle, #00f9ff 3px, transparent 2px);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 25px 25px;
+  -webkit-background-size: 25px 25px;
 }
 
 .contact-info {
