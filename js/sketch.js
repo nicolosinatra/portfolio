@@ -58,9 +58,7 @@ function draw() {
       let dotX = round(smoothX - width / 2);
       let dotY = round(smoothY - height / 2);
 
-      // reset sfondo con click
-      if (!mouseIsPressed) {
-        
+      if (windowWidth < 900) {
         // disegno i punti in tutti i settori
         for (let i = 0; i < symmetry; i++) {
           push();
@@ -81,7 +79,33 @@ function draw() {
 
           pop();
         }
+      }else{
+        // con mouse premuto non disegna 
+        if (!mouseIsPressed) {
+          
+          // disegno i punti in tutti i settori
+          for (let i = 0; i < symmetry; i++) {
+            push();
+
+            rotate(i * angle);
+
+            noStroke();
+            // fill("#26150B");
+            // fill("#00f9ff");
+            fill("#00f9ff");
+            ellipse(dotX, dotY, 4, 4); // pallino principale
+
+            // riflesso
+            push();
+            scale(1, -1);
+            ellipse(dotX, dotY, 4, 4);
+            pop();
+
+            pop();
+          }
+        }
       }
+      
     }
   }
 // }
