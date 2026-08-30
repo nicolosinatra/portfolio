@@ -15,7 +15,7 @@ let mouseMove = 0;  // variabile per contare i movimenti del mouse
 
 let xPallinoPrecedente = 0;  // variabile per salvare le coordinate del pallino precedente
 let yPallinoPrecedente = 0;
-let disegnoiniziale_2 = [
+let disegnoiniziale = [
     {
         "x": -503,
         "y": -404
@@ -2202,7 +2202,7 @@ let disegnoiniziale_2 = [
     }
 ];
 
-let disegnoiniziale = [
+let disegnoiniziale_2 = [
     {
         "x": -503,
         "y": -404
@@ -8870,7 +8870,7 @@ let disegnoiniziale = [
 ];
 
 function drawPatternFromPoints() {
-  const size = windowWidth < 900 ? 2.5 : 3;
+  const size = windowWidth < 900 ? 2.5 : 2.5;
   noStroke();
   fill("#00f9ff");
 
@@ -8896,7 +8896,7 @@ function savePointToDrawing(x, y) {
 }
 
 function drawLivePoint(x, y, save = false) {
-  const size = windowWidth < 900 ? 2.5 : 3;
+  const size = windowWidth < 900 ? 2.5 : 2.5;
   noStroke();
   fill("#00f9ff");
 

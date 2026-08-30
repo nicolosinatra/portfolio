@@ -927,6 +927,13 @@ canvas {
   line-height: 1;
 }
 
+.Polifemo_link:hover{
+  color: inherit; 
+  text-decoration: underline; 
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
 
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
