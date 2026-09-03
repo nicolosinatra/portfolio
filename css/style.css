@@ -944,6 +944,18 @@ canvas {
   .statement{
     font-size: 36px;
   }
+
+  .Polifemo_link{
+    color: inherit; 
+    text-decoration: underline; 
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .Polifemo_link:hover{
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+  }
 }
 
 /* -------------------------------------- MOBILE: max-width 600px */
