@@ -438,10 +438,10 @@ img{
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%);
   mix-blend-mode: plus-lighter;
   isolation:isolate;
-  will-change: filter, transform;
+  will-change: filter, transform; */
 }
 
 .project-hero-img:hover {
