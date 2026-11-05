@@ -33,9 +33,9 @@
 /* Variabili CSS */
 :root {
     --color-background: #fafafa;
-    --color-txt: #402413;
+    --color-txt: #5B382F;
     --color-dark: #26150B;
-    --color-accent: #00f9ff;
+    --color-accent: #88C7FF;
     --color-shadow: rgba(0, 0, 0, 0.25);
     --color-transparent: transparent;
 
@@ -591,7 +591,7 @@ img{
     line-height: 0;
     font-style: normal;
     font-size: 20px;
-    color: var(--color-dark);
+    color: var(--color-txt);
     width: 100%;
     padding-top: 5px;
 }
@@ -647,7 +647,7 @@ img{
 
 .font-name {
     line-height: 0;
-    color: var(--color-dark);
+    color: var(--color-txt);
     white-space: nowrap;
 }
 
@@ -943,7 +943,7 @@ body[data-page="home"] canvas {
 }
 
 .statement{
-  color: var(--color-dark);
+  color: var(--color-txt);
   font-size: min(64px, 7vh);
   line-height: 1;
 }

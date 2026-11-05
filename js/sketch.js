@@ -9,7 +9,7 @@ let centroOrigineY = 2;
 // Aspetto dots
 let spessoreTraccia = 0.5;
 const coloreTracciaFun = function(){
-    if (Math.round(Math.random()) == 0){ return '#26150B' }else{ return '#00f9ff'}
+    if (Math.round(Math.random()) == 0){ return '#26150B' }else{ return '#88C7FF'}
 }
 let coloreTraccia;
 let coloreRiempimento = '#fafafa';
