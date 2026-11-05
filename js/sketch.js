@@ -46855,15 +46855,13 @@ function drawLivePoint(x, y, save = false) {
   }
 }
 
-function setup() {
-  if (windowWidth < 600) {
-    createCanvas(windowWidth, windowHeight - 47); //28 dimensione footer che adesso è nascosto
-  } else if (windowWidth < 1024) {
-    createCanvas(windowWidth, windowHeight - 52.5); // 35 dimensione footer che adesso è nascosto
-  } else {
-    createCanvas(windowWidth, windowHeight - 55); // togli dimensione header e footer -- 42 dimensione footer che adesso è nascosto
-  }
+function getCanvasHeight() {
+  const topOffset = windowWidth < 600 ? 47 : windowWidth < 1024 ? 52.5 : 55;
+  return Math.max(0, windowHeight - topOffset);
+}
 
+function setup() {
+  createCanvas(windowWidth, getCanvasHeight());
   angleMode(DEGREES);
 
   coloreTraccia = coloreTracciaFun();
@@ -46923,6 +46921,5 @@ function draw() {
 }
 
 function windowResized() {
-  setup();
+  resizeCanvas(windowWidth, getCanvasHeight());
 }
-

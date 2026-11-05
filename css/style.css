@@ -920,6 +920,11 @@ img{
   flex-direction: column;
 }
 
+.desktop-home .main {
+  width: 100%;
+  min-height: 0;
+}
+
 canvas {
   position: relative;
   display: block;
@@ -929,9 +934,17 @@ canvas {
   pointer-events: none;
 }
 
+body[data-page="home"] canvas {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: calc(var(--app-height) - 55px);
+}
+
 .statement{
   color: var(--color-dark);
-  font-size: 64px;
+  font-size: min(64px, 7vh);
   line-height: 1;
 }
 
@@ -947,6 +960,11 @@ canvas {
 @media (max-width: 1024px) {
   .desktop-home {
     padding: 53.5px 0 0;
+  }
+
+  body[data-page="home"] canvas {
+    top: 52.5px;
+    height: calc(var(--app-height) - 52.5px);
   }
 
   .statement{
@@ -970,6 +988,11 @@ canvas {
 @media (max-width: 600px) {
   .desktop-home {
     padding: 48px 0 0;
+  }
+
+  body[data-page="home"] canvas {
+    top: 47px;
+    height: calc(var(--app-height) - 47px);
   }
 
   .statement{
@@ -1059,6 +1082,15 @@ canvas {
   background-position: center;
   background-size: 25px 25px;
   -webkit-background-size: 25px 25px;
+}
+
+.note-legali{
+  bottom: 0;
+  border-top: var(--color-dark) solid 1px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
 
 .contact-info {
@@ -1843,4 +1875,3 @@ h3.about{
   }
 
 }
-
