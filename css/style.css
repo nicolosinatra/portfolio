@@ -1054,8 +1054,8 @@ canvas {
   line-height: calc(var(--project-line-height) * 1em);
   text-decoration: none;
   text-transform: uppercase;
-  background-image: radial-gradient(circle, var(--color-accent) 3px, var(--color-transparent) 2px);
-  background-repeat: repeat-x;
+  background-image: radial-gradient(circle, var(--color-background) 0 3px, var(--color-dark) 3.5px 4.5px, var(--color-transparent) 5px);
+  background-repeat: space no-repeat;
   background-position: center;
   background-size: 25px 25px;
   -webkit-background-size: 25px 25px;
@@ -1843,7 +1843,4 @@ h3.about{
   }
 
 }
-
-
-
 
