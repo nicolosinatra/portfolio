@@ -32,6 +32,13 @@
 
 /* Variabili CSS */
 :root {
+    --color-background: #fafafa;
+    --color-txt: #402413;
+    --color-dark: #26150B;
+    --color-accent: #00f9ff;
+    --color-shadow: rgba(0, 0, 0, 0.25);
+    --color-transparent: transparent;
+
     --gutter-small: 20px;  /* spazio tra le colonne (gutter) piccolo */
     --gutter-medium: 25px; /* spazio tra le colonne (gutter) medio */
     --gutter-large: 30px;  /* spazio tra le colonne (gutter) grande */
@@ -311,8 +318,8 @@ p {
 /* ------------------------------------------------------------------------------ GLOBAL ------------------------------------------------------------------------------ */
 
 HTML, body {
-  background: #fafafa;
-  color:#402413 ;
+  background: var(--color-background);
+  color: var(--color-txt);
   margin: 0;
   padding: 0;
   font-family: 'Neue Regrade', Arial, sans-serif;
@@ -340,14 +347,14 @@ img{
 }
 
 .header-fixed {
-  background: #fafafa;
+  background: var(--color-background);
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   padding: 10px var(--margin-oriz-large);
   box-sizing: border-box;
-  border-bottom: 1px solid #402413;
+  border-bottom: 1px solid var(--color-dark);
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -362,7 +369,7 @@ img{
 
 .header h2, .header-fixed h2 {
   font-size: 28px;
-  color: #402413;
+  color: var(--color-txt);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -431,7 +438,7 @@ img{
 
 .project-hero-img{
   width: 65%;
-  background: #26150B;
+  background: var(--color-dark);
 }
 
 .project-hero-img img {
@@ -468,7 +475,7 @@ img{
 .project-info-row {
   display: flex;
   align-items: left;
-  border-bottom: 1px solid #402413;
+  border-bottom: 1px solid var(--color-dark);
   padding: 5px 0;
 }
 
@@ -499,7 +506,7 @@ img{
 }
 
 .new-section {
-  border-top: 1px solid #402413;
+  border-top: 1px solid var(--color-dark);
   padding-top: 8px;
   margin:0;
   text-transform: uppercase;
@@ -559,8 +566,8 @@ img{
 }
 
 .color-card {
-    background-color: #fafafa;
-    border: 1px solid #402413;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-dark);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -575,7 +582,7 @@ img{
 .color-sample {
     flex: 1;
     width: 100%;
-    border: 1px solid #402413;
+    border: 1px solid var(--color-dark);
     min-height: 1px;
     min-width: 1px;
 }
@@ -584,7 +591,7 @@ img{
     line-height: 0;
     font-style: normal;
     font-size: 20px;
-    color: black;
+    color: var(--color-dark);
     width: 100%;
     padding-top: 5px;
 }
@@ -640,7 +647,7 @@ img{
 
 .font-name {
     line-height: 0;
-    color: black;
+    color: var(--color-dark);
     white-space: nowrap;
 }
 
@@ -661,13 +668,13 @@ img{
 
 .mockup-img{
   border-radius: 20px;
-  box-shadow: 0 4px 18px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 18px 4px var(--color-shadow);
   margin: 5px 0;
 }
 
 .mockup-mobile-img{
   border-radius: 10px;
-  box-shadow: 0 4px 18px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 18px 4px var(--color-shadow);
   margin: 5px 0;
 }
 
@@ -686,7 +693,7 @@ img{
 
 .backtotop p {
   font-size: 32px;
-  color: #402413;
+  color: var(--color-txt);
   text-decoration: none;
   cursor: pointer;
 }
@@ -715,7 +722,7 @@ img{
     overflow: hidden;
     display: block;
     transition: max-height 0.4s ease; /* durata animazione */
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid var(--color-transparent);
   }
 
   .voci-menu.open {
@@ -724,7 +731,7 @@ img{
 
   .voce-menu{
     display: block;
-    border-top: 1px solid #402413;
+    border-top: 1px solid var(--color-dark);
     padding: 10px var(--margin-oriz-medium);
     text-align: left;
     transform: translateY(-20px);
@@ -893,6 +900,7 @@ img{
 
   .img-affiancate{
     flex-direction: column;
+    gap: var(--spacing-new-section-small);
   }
 
   .backtotop {
@@ -922,7 +930,7 @@ canvas {
 }
 
 .statement{
-  color:#26150b;
+  color: var(--color-dark);
   font-size: 64px;
   line-height: 1;
 }
@@ -991,13 +999,13 @@ canvas {
 }
 
 .filter-btn {
-  background: #fafafa;
+  background: var(--color-background);
   border: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
   font-size: 32px;
-  color: #402413;
+  color: var(--color-txt);
   text-align: left;
   font-style: normal;
   font-weight: 400;
@@ -1023,7 +1031,7 @@ canvas {
 .project a {
   --project-line-height: 0.833;
   font-size: 18vw;
-  color: #402413;
+  color: var(--color-txt);
   text-transform: uppercase;
   text-align: right;
   font-style: normal;
@@ -1046,7 +1054,7 @@ canvas {
   line-height: calc(var(--project-line-height) * 1em);
   text-decoration: none;
   text-transform: uppercase;
-  background-image: radial-gradient(circle, #00f9ff 3px, transparent 2px);
+  background-image: radial-gradient(circle, var(--color-accent) 3px, var(--color-transparent) 2px);
   background-repeat: repeat-x;
   background-position: center;
   background-size: 25px 25px;
@@ -1058,8 +1066,8 @@ canvas {
   left: 0;
   bottom: 0;
   width: 100vw;
-  background: #26150B;
-  color: #00f9ff;
+  background: var(--color-dark);
+  color: var(--color-accent);
   font-size: 20px;
   font-weight: 500;
   line-height: 35px;
@@ -1094,9 +1102,9 @@ canvas {
   padding-left: var(--margin-oriz-large);
   padding-right: var(--margin-oriz-large);
   z-index: 5;
-  background-color: #fafafa;
+  background-color: var(--color-background);
   cursor: pointer;
-  border-bottom: #402413 solid 1px;
+  border-bottom: var(--color-dark) solid 1px;
 }
 
 .anni-progetti-container {
@@ -1105,7 +1113,7 @@ canvas {
 }
 
 .anni-progetti-menu {
-  border-top: #402413 solid 1px;
+  border-top: var(--color-dark) solid 1px;
   padding: 15px var(--margin-oriz-large) 0;
 }
 
@@ -1263,28 +1271,28 @@ canvas {
 /* ------------------------------------------------------------------------------ ABOUT ------------------------------------------------------------------------------ */
 
 body.about {
-  background-color: #26150b;
+  background-color: var(--color-dark);
 }
 
 .header-fixed.about {
-  background-color: #26150b;
-  border-bottom: 1px solid #00f9ff;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid var(--color-accent);
 }
 
 .plus-icon.about path{
-  stroke: #00f9ff;
+  stroke: var(--color-accent);
 }
 
 h1.about{
-  color: #00f9ff;
+  color: var(--color-accent);
 }
 
 h2.about{
-  color: #00f9ff;
+  color: var(--color-accent);
 }
 
 h3.about{
-  color: #00f9ff;
+  color: var(--color-accent);
   font-size: 21px;
 }
 
@@ -1314,13 +1322,13 @@ h3.about{
 }
 
 .contact-info.about {
-  background-color: #26150B;
+  background-color: var(--color-dark);
 }
 
 /* -------------------------------------- TABLET: max-width 1024px */
 @media (max-width: 1024px) {
   .voce-menu.about {
-    border-top: 1px solid #00f9ff;
+    border-top: 1px solid var(--color-accent);
   }
 
   .section-row.about {
@@ -1585,7 +1593,7 @@ h3.about{
 
 .qr-section{
   width: 100%;
-  border-top: 1px solid #402413;
+  border-top: 1px solid var(--color-dark);
   padding-top: 10px;
 }
 
@@ -1835,7 +1843,6 @@ h3.about{
   }
 
 }
-
 
 
 
