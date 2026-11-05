@@ -1,5 +1,5 @@
 // Numero di settori simmetrici
-let symmetry = Math.floor(Math.random()*4) + 4;
+let symmetry = Math.floor(Math.random()*5) + 2;
 let angle = 360 / symmetry;
 
 // definizione del centro/origine del disegno (2 vuol dire dividere a metà larghezza e altezza)
@@ -8,9 +8,12 @@ let centroOrigineY = 2;
 
 // Aspetto dots
 let spessoreTraccia = 0.5;
-let coloreTraccia = '#00f9ff';
+const coloreTracciaFun = function(){
+    if (Math.round(Math.random()) == 0){ return '#26150B' }else{ return '#00f9ff'}
+}
+let coloreTraccia;
 let coloreRiempimento = '#fafafa';
-let size = Math.floor(Math.random()*10) + 3;
+let size = Math.floor(Math.random()*9) + 2;
 
 // variabili per smoothing
 let smoothX, smoothY;
@@ -46863,7 +46866,7 @@ function setup() {
 
   angleMode(DEGREES);
 
-  
+  coloreTraccia = coloreTracciaFun();
 
   // inizializzo smoothing con il mouse
   smoothX = mouseX;
