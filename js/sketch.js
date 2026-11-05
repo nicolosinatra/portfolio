@@ -25,6 +25,7 @@ let mouseYPrev = 0;
 let showBlink = true;  // mostra il blink finché il mouse non si muove
 let mouseMovedOnce = false;  // indica se il mouse si è mosso per la prima volta
 let mouseMove = 0;  // variabile per contare i movimenti del mouse
+let initialPatternVisible = true;
 
 let xPallinoPrecedente = 0;  // variabile per salvare le coordinate del pallino precedente
 let yPallinoPrecedente = 0;
@@ -46880,7 +46881,7 @@ function draw() {
     mouseMovedOnce = true;
   }
 
-  if (!mouseMovedOnce) {
+  if (initialPatternVisible && !mouseMovedOnce) {
     drawPatternFromPoints();
     mouseMove = 1;
   }else if (mouseMovedOnce && mouseMove === 1) {
@@ -46923,3 +46924,10 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, getCanvasHeight());
 }
+
+document.addEventListener("touchstart", () => {
+  initialPatternVisible = false;
+  mouseMovedOnce = true;
+  mouseMove = 2;
+  clear();
+}, { once: true, passive: true });
